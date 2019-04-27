@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1509992957916926825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6489271868016881113}
+  m_Layer: 10
+  m_Name: CamFraming
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6489271868016881113
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509992957916926825}
+  m_LocalRotation: {x: -0.000000040978193, y: -0.9942449, z: 0.10713144, w: -0.0000003874302}
+  m_LocalPosition: {x: 0.6299983, y: 8.36, z: 4.9599996}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8429376359104108551}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 12.3, y: 0, z: 0}
 --- !u!1 &8429376359104108550
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,7 +39,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8429376359104108551}
-  m_Layer: 0
+  - component: {fileID: 1092317518429183}
+  m_Layer: 10
   m_Name: CharacterFish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23,14 +54,28 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8429376359104108550}
-  m_LocalRotation: {x: -0, y: 0.8660256, z: -0, w: 0.49999973}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.21632451, y: 0.21632454, z: 0.21632452}
   m_Children:
   - {fileID: 8429376359451524986}
+  - {fileID: 6489271868016881113}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 120.00001, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1092317518429183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8429376359104108550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a182d09c60c0e4d46a4822991f40539d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camFramingPoint: {fileID: 6489271868016881113}
 --- !u!1 &8429376359451524985
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,7 +87,8 @@ GameObject:
   - component: {fileID: 8429376359451524986}
   - component: {fileID: 8429376359451524988}
   - component: {fileID: 8429376359451524987}
-  m_Layer: 0
+  - component: {fileID: 9086003072438360630}
+  m_Layer: 10
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,13 +102,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8429376359451524985}
-  m_LocalRotation: {x: 0.69108486, y: 0.14967188, z: -0.1496719, w: 0.69108486}
+  m_LocalRotation: {x: 0.706934, y: 0, z: 0, w: 0.7072795}
   m_LocalPosition: {x: 0.84, y: 4.74, z: -0.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8429376359104108551}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 89.97201, y: 0, z: -24.44}
+  m_LocalEulerAnglesHint: {x: 89.97201, y: 0, z: 0}
 --- !u!33 &8429376359451524988
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -108,3 +154,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &9086003072438360630
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8429376359451524985}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000002, y: 0.51, z: 9.999998}
+  m_Center: {x: 0.00000023841858, y: 0.000000059604645, z: 0.00000047683716}

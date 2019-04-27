@@ -52,68 +52,82 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 moveDirection = new Vector3(moveHorizontal, 0, moveVertical);
-        if (moveDirection.magnitude > 0.1f)
+        if (GameManager.Instance.CurrentGameState == GameManager.GameState.Walking)
         {
-            moveDirection = new Vector3(moveDirection.x * moveSpeed, playerRigidbody.velocity.y, moveDirection.z * moveSpeed);
-            moveDirection = transform.TransformDirection(moveDirection);
+            Vector3 moveDirection = new Vector3(moveHorizontal, 0, moveVertical);
+            if (moveDirection.magnitude > 0.1f)
+            {
+                moveDirection = new Vector3(moveDirection.x * moveSpeed, playerRigidbody.velocity.y, moveDirection.z * moveSpeed);
+                moveDirection = transform.TransformDirection(moveDirection);
 
-            playerRigidbody.MovePosition(playerRigidbody.position + moveDirection);
+                playerRigidbody.MovePosition(playerRigidbody.position + moveDirection);
+            }
         }
     }
 
     private void Update()
     {
-        moveHorizontal = Input.GetAxis("Horizontal");
-        moveVertical = Input.GetAxis("Vertical");
-        mousePanX = Input.GetAxis("Mouse X");
-        mousePanY = Input.GetAxis("Mouse Y");
-
-        currentcamRotX -= mousePanY * mouseSpeed * Time.deltaTime;
-
-        playerTransform.Rotate(Vector3.up, mousePanX * mouseSpeed * Time.deltaTime);
-        camTransform.localEulerAngles = new Vector3(Mathf.Clamp(camRotXInit + currentcamRotX, clampCamRotX.x, clampCamRotX.y), camTransform.localEulerAngles.y, camTransform.localEulerAngles.z);
-
-        Ray checkGroundRay = new Ray(transform.position - Vector3.up * 0.02f, -Vector3.up);
-
-        if (Physics.Raycast(checkGroundRay, out RaycastHit raycastHitGround, checkGroundDistance))
+        if (GameManager.Instance.CurrentGameState == GameManager.GameState.Walking)
         {
-            playerRigidbody.useGravity = false;
-        }
+            moveHorizontal = Input.GetAxis("Horizontal");
+            moveVertical = Input.GetAxis("Vertical");
+            mousePanX = Input.GetAxis("Mouse X");
+            mousePanY = Input.GetAxis("Mouse Y");
 
-        Ray interactionRay = new Ray(camTransform.position, camTransform.forward);
+            currentcamRotX -= mousePanY * mouseSpeed * Time.deltaTime;
 
-        bool raycastInteraction = Physics.Raycast(interactionRay, out RaycastHit raycastHitInteraction, checkInteractionDistance, interactionLayerMask);
+            playerTransform.Rotate(Vector3.up, mousePanX * mouseSpeed * Time.deltaTime);
+            camTransform.localEulerAngles = new Vector3(Mathf.Clamp(camRotXInit + currentcamRotX, clampCamRotX.x, clampCamRotX.y), camTransform.localEulerAngles.y, camTransform.localEulerAngles.z);
 
-        if (raycastInteraction)
-        {
-            if (raycastHitInteraction.collider != null && raycastHitInteraction.collider.gameObject.layer != interactionLayer)
+            Ray checkGroundRay = new Ray(transform.position - Vector3.up * 0.02f, -Vector3.up);
+
+            if (Physics.Raycast(checkGroundRay, out RaycastHit raycastHitGround, checkGroundDistance))
             {
-                interactionLayer = raycastHitInteraction.collider.gameObject.layer;
+                playerRigidbody.useGravity = false;
+            }
+
+            //if (GameManager.Instance.CurrentGameState == GameManager.GameState.Walking)
+            //{
+            Ray interactionRay = new Ray(camTransform.position, camTransform.forward);
+            bool raycastInteraction = Physics.Raycast(interactionRay, out RaycastHit raycastHitInteraction, checkInteractionDistance, interactionLayerMask);
+
+            if (raycastInteraction)
+            {
+                if (raycastHitInteraction.collider != null && raycastHitInteraction.collider.gameObject.layer != interactionLayer)
+                {
+                    interactionLayer = raycastHitInteraction.collider.gameObject.layer;
+                    if (onInteractionLayerChanged != null)
+                    {
+                        onInteractionLayerChanged(interactionLayer);
+                    }
+                }
+            }
+            else if (interactionLayer != 0)
+            {
+                interactionLayer = 0;
                 if (onInteractionLayerChanged != null)
                 {
                     onInteractionLayerChanged(interactionLayer);
                 }
             }
-        }
-        else if (interactionLayer != 0)
-        {
-            interactionLayer = 0;
-            if (onInteractionLayerChanged != null)
-            {
-                onInteractionLayerChanged(interactionLayer);
-            }
-        }
 
-        if (Input.GetMouseButtonDown(0) && raycastInteraction)
-        {
-            Door doorRaycast = raycastHitInteraction.collider.GetComponent<Door>();
-            if (doorRaycast != null)
+            if (Input.GetMouseButtonDown(0) && raycastInteraction)
             {
-                if (!doorRaycast.isOpened)
-                    doorRaycast.Open();
-                else
-                    doorRaycast.Close();
+                Door doorRaycast = raycastHitInteraction.collider.GetComponent<Door>();
+                if (doorRaycast != null)
+                {
+                    if (!doorRaycast.isOpened)
+                        doorRaycast.Open();
+                    else
+                        doorRaycast.Close();
+                }
+
+                TalkableCharacter talkableCharacter = raycastHitInteraction.collider.GetComponentInParent<TalkableCharacter>();
+                if (talkableCharacter != null)
+                {
+                    GameManager.Instance.ChangeState(GameManager.GameState.Talking);
+                    GetComponentInChildren<PlayerCamera>().AdaptCam(talkableCharacter);
+                }
             }
         }
     }
