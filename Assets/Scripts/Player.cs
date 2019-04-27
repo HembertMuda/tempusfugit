@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Player : MonoBehaviour
 {
@@ -20,6 +21,15 @@ public class Player : MonoBehaviour
     [SerializeField]
     private Transform camTransform = null;
 
+    [SerializeField]
+    private LayerMask interactionLayerMask;
+
+    [SerializeField]
+    private float checkGroundDistance = 0.1f;
+
+    [SerializeField]
+    private float checkInteractionDistance = 1f;
+
     private float moveHorizontal;
     private float moveVertical;
 
@@ -29,9 +39,15 @@ public class Player : MonoBehaviour
     private float camRotXInit;
     private float currentcamRotX;
 
+    private int interactionLayer;
+
+    public Action<int> onInteractionLayerChanged;
+
     private void Start()
     {
         camRotXInit = camTransform.localEulerAngles.x;
+
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void FixedUpdate()
@@ -58,6 +74,47 @@ public class Player : MonoBehaviour
         playerTransform.Rotate(Vector3.up, mousePanX * mouseSpeed * Time.deltaTime);
         camTransform.localEulerAngles = new Vector3(Mathf.Clamp(camRotXInit + currentcamRotX, clampCamRotX.x, clampCamRotX.y), camTransform.localEulerAngles.y, camTransform.localEulerAngles.z);
 
-        //Debug.Log($"moveHorizontal = {moveHorizontal} / moveVertical = {moveVertical}");
+        Ray checkGroundRay = new Ray(transform.position - Vector3.up * 0.02f, -Vector3.up);
+
+        if (Physics.Raycast(checkGroundRay, out RaycastHit raycastHitGround, checkGroundDistance))
+        {
+            playerRigidbody.useGravity = false;
+        }
+
+        Ray interactionRay = new Ray(camTransform.position, camTransform.forward);
+
+        bool raycastInteraction = Physics.Raycast(interactionRay, out RaycastHit raycastHitInteraction, checkInteractionDistance, interactionLayerMask);
+
+        if (raycastInteraction)
+        {
+            if (raycastHitInteraction.collider != null && raycastHitInteraction.collider.gameObject.layer != interactionLayer)
+            {
+                interactionLayer = raycastHitInteraction.collider.gameObject.layer;
+                if (onInteractionLayerChanged != null)
+                {
+                    onInteractionLayerChanged(interactionLayer);
+                }
+            }
+        }
+        else if (interactionLayer != 0)
+        {
+            interactionLayer = 0;
+            if (onInteractionLayerChanged != null)
+            {
+                onInteractionLayerChanged(interactionLayer);
+            }
+        }
+
+        if (Input.GetMouseButtonDown(0) && raycastInteraction)
+        {
+            Door doorRaycast = raycastHitInteraction.collider.GetComponent<Door>();
+            if (doorRaycast != null)
+            {
+                if (!doorRaycast.isOpened)
+                    doorRaycast.Open();
+                else
+                    doorRaycast.Close();
+            }
+        }
     }
 }

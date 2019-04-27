@@ -126,7 +126,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
@@ -149,6 +149,11 @@ MonoBehaviour:
   playerRigidbody: {fileID: 7601078817930908}
   playerTransform: {fileID: 7601078817930909}
   camTransform: {fileID: 534669905}
+  interactionLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  checkGroundDistance: 0.05
+  checkInteractionDistance: 2
 --- !u!1 &7601079341991012
 GameObject:
   m_ObjectHideFlags: 0
