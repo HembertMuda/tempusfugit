@@ -37,10 +37,13 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 moveDirection = new Vector3(moveHorizontal, 0, moveVertical);
-        moveDirection = new Vector3(moveDirection.x * moveSpeed, playerRigidbody.velocity.y, moveDirection.z * moveSpeed);
-        moveDirection = transform.TransformDirection(moveDirection);
+        if (moveDirection.magnitude > 0.1f)
+        {
+            moveDirection = new Vector3(moveDirection.x * moveSpeed, playerRigidbody.velocity.y, moveDirection.z * moveSpeed);
+            moveDirection = transform.TransformDirection(moveDirection);
 
-        playerRigidbody.MovePosition(playerRigidbody.position + moveDirection);
+            playerRigidbody.MovePosition(playerRigidbody.position + moveDirection);
+        }
     }
 
     private void Update()
