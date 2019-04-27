@@ -84,6 +84,7 @@ public class Player : MonoBehaviour
             if (Physics.Raycast(checkGroundRay, out RaycastHit raycastHitGround, checkGroundDistance))
             {
                 playerRigidbody.useGravity = false;
+                playerRigidbody.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
             }
 
             //if (GameManager.Instance.CurrentGameState == GameManager.GameState.Walking)

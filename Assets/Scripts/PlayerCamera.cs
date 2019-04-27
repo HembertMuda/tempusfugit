@@ -7,6 +7,9 @@ public class PlayerCamera : MonoBehaviour
     [SerializeField]
     private float shakeStrengh = 0.5f;
 
+    [SerializeField]
+    private Vector2 randomFrequency = new Vector2(0.3f, 1.2f);
+
     private Vector3 camLocalPosInit;
 
     void Start()
@@ -25,9 +28,9 @@ public class PlayerCamera : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(0.3f, 1.2f));
-            if (GameManager.Instance.CurrentGameState == GameManager.GameState.Walking)
-                transform.DOPunchRotation(new Vector3(shakeStrengh * (Random.Range(0, 2) == 0 ? 1f : -1f), 0f, 0f), 0.3f, 1, 0.2f);
+            yield return new WaitForSeconds(Random.Range(randomFrequency.x, randomFrequency.y));
+            //if (GameManager.Instance.CurrentGameState == GameManager.GameState.Walking)
+            transform.DOPunchRotation(new Vector3(shakeStrengh * (Random.Range(0, 2) == 0 ? 1f : -1f), 0f, 0f), 0.3f, 1, 0.2f);
         }
     }
 }
