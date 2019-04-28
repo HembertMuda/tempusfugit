@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DG.Tweening;
+using System;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -40,12 +41,15 @@ public class Player : MonoBehaviour
     private float currentcamRotX;
 
     private int interactionLayer;
+    private Vector3 camLocalPosInit;
 
     public Action<int> onInteractionLayerChanged;
 
     private void Start()
     {
         camRotXInit = camTransform.localEulerAngles.x;
+        camLocalPosInit = camTransform.localPosition;
+        GameManager.Instance.onGameStateChanged += OnGameStateChanged;
     }
 
     private void FixedUpdate()
@@ -104,10 +108,7 @@ public class Player : MonoBehaviour
             else if (interactionLayer != 0)
             {
                 interactionLayer = 0;
-                if (onInteractionLayerChanged != null)
-                {
-                    onInteractionLayerChanged(interactionLayer);
-                }
+                onInteractionLayerChanged?.Invoke(interactionLayer);
             }
 
             if (Input.GetMouseButtonDown(0) && raycastInteraction)
@@ -125,11 +126,26 @@ public class Player : MonoBehaviour
                 if (talkableCharacter != null)
                 {
                     GameManager.Instance.ChangeState(GameManager.GameState.Talking);
-                    GetComponentInChildren<PlayerCamera>().AdaptCam(talkableCharacter);
+                    AdaptCamToTalkableCharacter(talkableCharacter);
                     FindObjectOfType<UIManager>().CurrentTalkableCharacter = talkableCharacter;
                     talkableCharacter.LetsTalk();
                 }
             }
+        }
+    }
+
+    public void AdaptCamToTalkableCharacter(TalkableCharacter talkableCharacter)
+    {
+        camTransform.DOMove(talkableCharacter.camFramingPoint.position, 1f).SetEase(Ease.OutCubic);
+        camTransform.DORotate(talkableCharacter.camFramingPoint.eulerAngles, 1f).SetEase(Ease.OutCubic);
+    }
+
+    void OnGameStateChanged(GameManager.GameState newGameState)
+    {
+        if (newGameState == GameManager.GameState.Walking)
+        {
+            camTransform.localPosition = camLocalPosInit;
+            camTransform.localEulerAngles = Vector3.zero;
         }
     }
 }

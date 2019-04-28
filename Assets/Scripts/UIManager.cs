@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class UIManager : MonoBehaviour
     private TextMeshProUGUI chatBoxText = null;
 
     [SerializeField]
-    private List<TextMeshProUGUI> choicesText = null;
+    private List<Text> choicesText = null;
 
     public TalkableCharacter CurrentTalkableCharacter;
 
@@ -49,9 +50,15 @@ public class UIManager : MonoBehaviour
 
     void OnGamestateChanged(GameManager.GameState newGameState)
     {
-        ChangeInteractionText(0);
-
-        dialogueBoxCanvasGroup.DOFade(1f, 0.5f).SetEase(Ease.OutCubic);
+        if (newGameState == GameManager.GameState.Talking)
+        {
+            ChangeInteractionText(0);
+            dialogueBoxCanvasGroup.DOFade(1f, 0.5f).SetEase(Ease.OutCubic);
+        }
+        else if (newGameState == GameManager.GameState.Walking)
+        {
+            dialogueBoxCanvasGroup.DOFade(0f, 0.5f).SetEase(Ease.OutCubic);
+        }
     }
 
     public void ChangeChatBoxtext(string sentence)
@@ -95,14 +102,23 @@ public class UIManager : MonoBehaviour
         {
             if (i < choices.Count)
             {
-                choicesText[i].gameObject.SetActive(true);
+                choicesText[i].transform.parent.gameObject.SetActive(true);
                 choicesText[i].text = choices[i];
             }
             else
             {
-
-                choicesText[i].gameObject.SetActive(false);
+                choicesText[i].transform.parent.gameObject.SetActive(false);
             }
         }
+    }
+
+    public void OnChoiceButtonClicked(int choiceindex)
+    {
+        for (int i = 0; i < choicesText.Count; i++)
+        {
+            choicesText[i].transform.parent.gameObject.SetActive(false);
+        }
+
+        CurrentTalkableCharacter.CheckRightChoice(choiceindex);
     }
 }

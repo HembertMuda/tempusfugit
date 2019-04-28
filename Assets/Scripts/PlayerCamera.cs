@@ -16,18 +16,9 @@ public class PlayerCamera : MonoBehaviour
     [SerializeField]
     private Vector2 randomFrequency = new Vector2(0.3f, 1.2f);
 
-    private Vector3 camLocalPosInit;
-
     void Start()
     {
-        camLocalPosInit = transform.localPosition;
         StartCoroutine(RandomShake());
-    }
-
-    public void AdaptCam(TalkableCharacter talkableCharacter)
-    {
-        transform.DOMove(talkableCharacter.camFramingPoint.position, 1f).SetEase(Ease.OutCubic);
-        transform.DORotate(talkableCharacter.camFramingPoint.eulerAngles, 1f).SetEase(Ease.OutCubic);
     }
 
     IEnumerator RandomShake()

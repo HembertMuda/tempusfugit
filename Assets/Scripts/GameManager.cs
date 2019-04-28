@@ -13,22 +13,29 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
 
     public GameState CurrentGameState { get; set; } = GameState.Walking;
 
+    private Texture2D cursor;
+
     public void ChangeState(GameState newGameState)
     {
         if (CurrentGameState != newGameState)
         {
             CurrentGameState = newGameState;
+            Cursor.lockState = CurrentGameState == GameState.Talking ? CursorLockMode.None : CursorLockMode.Locked;
+            Cursor.SetCursor(CurrentGameState == GameState.Talking ? cursor : null, Vector2.zero, CursorMode.ForceSoftware);
+
             if (onGameStateChanged != null)
             {
                 onGameStateChanged(newGameState);
             }
+
         }
     }
 
     private void Start()
     {
-        Cursor.SetCursor(Resources.Load("LD_Icons_Curseur_Small") as Texture2D, Vector2.zero, CursorMode.ForceSoftware);
-        //Cursor.lockState = CursorLockMode.Locked;
+        cursor = Resources.Load("LD_Icons_Curseur_Small") as Texture2D;
+        //Cursor.SetCursor(cursor, Vector2.zero, CursorMode.ForceSoftware);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()

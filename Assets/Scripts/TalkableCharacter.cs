@@ -12,6 +12,15 @@ public class TalkableCharacter : MonoBehaviour
     [SerializeField, TextArea]
     private List<string> choices = new List<string>();
 
+    [SerializeField]
+    private int rightChoice = 0;
+
+    [SerializeField, TextArea]
+    private List<string> rightChoiceSentences = new List<string>();
+
+    [SerializeField, TextArea]
+    private List<string> badChoiceSentences = new List<string>();
+
     private Transform playerTransform;
 
     private UIManager uiManager;
@@ -59,13 +68,51 @@ public class TalkableCharacter : MonoBehaviour
             else
             {
                 currentCharacterState = CharacterState.Asking;
+                currentSentence = 0;
                 uiManager.AskSomething(choices);
             }
         }
-
-        if (currentCharacterState == CharacterState.Introducing)
+        if (currentCharacterState == CharacterState.Succeed)
         {
-
+            if (currentSentence < rightChoiceSentences.Count)
+            {
+                uiManager.ChangeChatBoxtext(rightChoiceSentences[currentSentence]);
+                currentSentence++;
+            }
+            else
+            {
+                currentCharacterState = CharacterState.Walking;
+                currentSentence = 0;
+                GameManager.Instance.ChangeState(GameManager.GameState.Walking);
+            }
         }
+        if (currentCharacterState == CharacterState.Fail)
+        {
+            if (currentSentence < badChoiceSentences.Count)
+            {
+                uiManager.ChangeChatBoxtext(badChoiceSentences[currentSentence]);
+                currentSentence++;
+            }
+            else
+            {
+                currentCharacterState = CharacterState.Walking;
+                currentSentence = 0;
+                GameManager.Instance.ChangeState(GameManager.GameState.Walking);
+            }
+        }
+    }
+
+    public void CheckRightChoice(int choice)
+    {
+        if (choice == rightChoice)
+        {
+            currentCharacterState = CharacterState.Succeed;
+        }
+        else
+        {
+            currentCharacterState = CharacterState.Fail;
+        }
+
+        LetsTalk();
     }
 }

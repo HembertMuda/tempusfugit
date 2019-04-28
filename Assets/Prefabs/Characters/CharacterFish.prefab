@@ -87,6 +87,14 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: badChoiceSentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
       propertyPath: choices.Array.data[0]
       value: Simon
       objectReference: {fileID: 0}
@@ -101,6 +109,22 @@ PrefabInstance:
     - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
       propertyPath: choices.Array.data[3]
       value: Camille
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[0]
+      value: Right! Simon.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[1]
+      value: That's my name too brow! Nice to meet you Simon.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[2]
+      value: See you!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: badChoiceSentences.Array.data[0]
+      value: Nop.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
