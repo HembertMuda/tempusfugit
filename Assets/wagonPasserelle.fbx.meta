@@ -1,0 +1,175 @@
+fileFormatVersion: 2
+guid: c8932ff0d0f9d0f498936c9b5f351be6
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: couloir_sans_porte
+    100002: Cube
+    100004: Cube.001
+    100006: floor_cabin
+    100008: floor_couloir
+    100010: floor_couloir.001
+    100012: floor_couloir.002
+    100014: floor_last_wagon
+    100016: rambarde
+    100018: roof
+    100020: roof.001
+    100022: //RootNode
+    100024: wall
+    100026: wall.001
+    100028: wall_windows_cabin
+    100030: wall_windows_couloir
+    100032: wall_windows_couloir.001
+    400000: couloir_sans_porte
+    400002: Cube
+    400004: Cube.001
+    400006: floor_cabin
+    400008: floor_couloir
+    400010: floor_couloir.001
+    400012: floor_couloir.002
+    400014: floor_last_wagon
+    400016: rambarde
+    400018: roof
+    400020: roof.001
+    400022: //RootNode
+    400024: wall
+    400026: wall.001
+    400028: wall_windows_cabin
+    400030: wall_windows_couloir
+    400032: wall_windows_couloir.001
+    2100000: No Name
+    2100002: Material
+    2300000: couloir_sans_porte
+    2300002: Cube
+    2300004: Cube.001
+    2300006: floor_cabin
+    2300008: floor_couloir
+    2300010: floor_couloir.001
+    2300012: floor_couloir.002
+    2300014: floor_last_wagon
+    2300016: rambarde
+    2300018: roof
+    2300020: roof.001
+    2300022: wall
+    2300024: wall.001
+    2300026: wall_windows_cabin
+    2300028: wall_windows_couloir
+    2300030: wall_windows_couloir.001
+    3300000: couloir_sans_porte
+    3300002: Cube
+    3300004: Cube.001
+    3300006: floor_cabin
+    3300008: floor_couloir
+    3300010: floor_couloir.001
+    3300012: floor_couloir.002
+    3300014: floor_last_wagon
+    3300016: rambarde
+    3300018: roof
+    3300020: roof.001
+    3300022: wall
+    3300024: wall.001
+    3300026: wall_windows_cabin
+    3300028: wall_windows_couloir
+    3300030: wall_windows_couloir.001
+    4300000: rambarde
+    4300002: floor_last_wagon
+    4300004: Cube.001
+    4300006: floor_couloir.002
+    4300008: wall_windows_couloir.001
+    4300010: couloir_sans_porte
+    4300012: roof.001
+    4300014: floor_couloir.001
+    4300016: Cube
+    4300018: wall_windows_cabin
+    4300020: roof
+    4300022: wall_windows_couloir
+    4300024: wall.001
+    4300026: floor_couloir
+    4300028: wall
+    4300030: floor_cabin
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
