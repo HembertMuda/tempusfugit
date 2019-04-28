@@ -12,6 +12,14 @@ ModelImporter:
     100012: wall.001
     100014: wall_windows_cabin
     100016: wall_windows_couloir
+    100018: couloir_sans_porte
+    100020: Cube.001
+    100022: floor_couloir.001
+    100024: floor_couloir.002
+    100026: floor_last_wagon
+    100028: rambarde
+    100030: roof.001
+    100032: wall_windows_couloir.001
     400000: Cube
     400002: floor_cabin
     400004: floor_couloir
@@ -21,6 +29,14 @@ ModelImporter:
     400012: wall.001
     400014: wall_windows_cabin
     400016: wall_windows_couloir
+    400018: couloir_sans_porte
+    400020: Cube.001
+    400022: floor_couloir.001
+    400024: floor_couloir.002
+    400026: floor_last_wagon
+    400028: rambarde
+    400030: roof.001
+    400032: wall_windows_couloir.001
     2100000: No Name
     2100002: Material
     2300000: Cube
@@ -31,6 +47,14 @@ ModelImporter:
     2300010: wall.001
     2300012: wall_windows_cabin
     2300014: wall_windows_couloir
+    2300016: couloir_sans_porte
+    2300018: Cube.001
+    2300020: floor_couloir.001
+    2300022: floor_couloir.002
+    2300024: floor_last_wagon
+    2300026: rambarde
+    2300028: roof.001
+    2300030: wall_windows_couloir.001
     3300000: Cube
     3300002: floor_cabin
     3300004: floor_couloir
@@ -39,6 +63,14 @@ ModelImporter:
     3300010: wall.001
     3300012: wall_windows_cabin
     3300014: wall_windows_couloir
+    3300016: couloir_sans_porte
+    3300018: Cube.001
+    3300020: floor_couloir.001
+    3300022: floor_couloir.002
+    3300024: floor_last_wagon
+    3300026: rambarde
+    3300028: roof.001
+    3300030: wall_windows_couloir.001
     4300000: Cube
     4300002: wall_windows_cabin
     4300004: roof
@@ -47,6 +79,14 @@ ModelImporter:
     4300010: floor_couloir
     4300012: wall
     4300014: floor_cabin
+    4300016: rambarde
+    4300018: floor_last_wagon
+    4300020: Cube.001
+    4300022: floor_couloir.002
+    4300024: wall_windows_couloir.001
+    4300026: couloir_sans_porte
+    4300028: roof.001
+    4300030: floor_couloir.001
   externalObjects: {}
   materials:
     importMaterials: 1
