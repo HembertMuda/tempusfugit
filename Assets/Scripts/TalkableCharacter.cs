@@ -15,5 +15,7 @@ public class TalkableCharacter : MonoBehaviour
     void Update()
     {
         transform.LookAt(playerTransform, Vector3.up);
+        //transform.forward = (playerTransform.position - transform.position).normalized;
+        //transform.up = Vector3.up;
     }
 }

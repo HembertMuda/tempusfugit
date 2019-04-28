@@ -568,6 +568,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3258338081891492703, guid: 4efe930964984224885d1487cfe5ded8,
+        type: 3}
+      propertyPath: m_Name
+      value: Prefab_Door
+      objectReference: {fileID: 0}
     - target: {fileID: 7197412673020172930, guid: 4efe930964984224885d1487cfe5ded8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -622,11 +627,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3258338081891492703, guid: 4efe930964984224885d1487cfe5ded8,
-        type: 3}
-      propertyPath: m_Name
-      value: Prefab_Door
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4efe930964984224885d1487cfe5ded8, type: 3}
@@ -1266,7 +1266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7601078817930909, guid: dc858f3fe5cd4a740b800189dc322312, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.63
+      value: 0.311
       objectReference: {fileID: 0}
     - target: {fileID: 7601078817930909, guid: dc858f3fe5cd4a740b800189dc322312, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1309,9 +1309,9 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 7601079341991013, guid: dc858f3fe5cd4a740b800189dc322312, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.93
+    - target: {fileID: 7601079341991014, guid: dc858f3fe5cd4a740b800189dc322312, type: 3}
+      propertyPath: m_Radius
+      value: 0.62
       objectReference: {fileID: 0}
     - target: {fileID: 534669904, guid: dc858f3fe5cd4a740b800189dc322312, type: 3}
       propertyPath: near clip plane
@@ -1337,10 +1337,6 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.a
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7601079341991014, guid: dc858f3fe5cd4a740b800189dc322312, type: 3}
-      propertyPath: m_Radius
-      value: 0.62
-      objectReference: {fileID: 0}
     - target: {fileID: 8394176044356051601, guid: dc858f3fe5cd4a740b800189dc322312,
         type: 3}
       propertyPath: randomFrequency.x
@@ -1348,8 +1344,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8394176044356051601, guid: dc858f3fe5cd4a740b800189dc322312,
         type: 3}
-      propertyPath: shakeStrengh
-      value: 0.2
+      propertyPath: randomFrequency.y
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc858f3fe5cd4a740b800189dc322312, type: 3}
