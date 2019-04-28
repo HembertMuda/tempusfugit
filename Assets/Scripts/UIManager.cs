@@ -19,6 +19,9 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private List<Text> choicesText = null;
 
+    [SerializeField]
+    private Image lockedCursor = null;
+
     public TalkableCharacter CurrentTalkableCharacter;
 
     private string currentSentence;
@@ -54,14 +57,16 @@ public class UIManager : MonoBehaviour
         {
             ChangeInteractionText(0);
             dialogueBoxCanvasGroup.DOFade(1f, 0.5f).SetEase(Ease.OutCubic);
+            lockedCursor.enabled = false;
         }
         else if (newGameState == GameManager.GameState.Walking)
         {
             dialogueBoxCanvasGroup.DOFade(0f, 0.5f).SetEase(Ease.OutCubic);
+            lockedCursor.enabled = true;
         }
     }
 
-    public void ChangeChatBoxtext(string sentence)
+    public void ChangeChatBoxText(string sentence)
     {
         chatBoxText.text = string.Empty;
         talkCoroutine = StartCoroutine(DrawDialogue(sentence));

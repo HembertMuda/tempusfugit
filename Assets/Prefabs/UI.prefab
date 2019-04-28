@@ -1631,6 +1631,7 @@ MonoBehaviour:
   - {fileID: 3182339191599322312}
   - {fileID: 7710639000266857800}
   - {fileID: 8136639055937496561}
+  lockedCursor: {fileID: 3921401942571346377}
   CurrentTalkableCharacter: {fileID: 0}
 --- !u!1 &8068682765491551947
 GameObject:

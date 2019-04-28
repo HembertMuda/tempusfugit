@@ -129,6 +129,7 @@ public class Player : MonoBehaviour
                     AdaptCamToTalkableCharacter(talkableCharacter);
                     FindObjectOfType<UIManager>().CurrentTalkableCharacter = talkableCharacter;
                     talkableCharacter.LetsTalk();
+                    playerRigidbody.velocity = Vector3.zero;
                 }
             }
         }

@@ -76,9 +76,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camFramingPoint: {fileID: 6489271868016881113}
-  introSentences:
-  - Hello! I am a big fish who wants some company.
-  - What's your name brow ?
+  introSentences: []
+  otherIntroSentences: []
+  choices: []
+  rightChoice: 0
+  rightChoiceSentences: []
+  badChoiceSentences: []
 --- !u!1 &8429376359451524985
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,9 @@ public class TalkableCharacter : MonoBehaviour
     private List<string> introSentences = new List<string>();
 
     [SerializeField, TextArea]
+    private List<string> otherIntroSentences = new List<string>();
+
+    [SerializeField, TextArea]
     private List<string> choices = new List<string>();
 
     [SerializeField]
@@ -24,6 +27,11 @@ public class TalkableCharacter : MonoBehaviour
     private Transform playerTransform;
 
     private UIManager uiManager;
+
+    private bool alreadyIntroduceOnce;
+
+    //[HideInInspector]
+    //public bool alreadyGiveTheirMemory;
 
     private CharacterState currentCharacterState = CharacterState.Walking;
 
@@ -60,37 +68,62 @@ public class TalkableCharacter : MonoBehaviour
 
         if (currentCharacterState == CharacterState.Introducing)
         {
-            if (currentSentence < introSentences.Count)
+            if (alreadyIntroduceOnce)
             {
-                uiManager.ChangeChatBoxtext(introSentences[currentSentence]);
-                currentSentence++;
+                if (currentSentence < otherIntroSentences.Count)
+                {
+                    uiManager.ChangeChatBoxText(otherIntroSentences[currentSentence]);
+                    currentSentence++;
+                }
+                else
+                {
+                    currentCharacterState = CharacterState.Asking;
+                    currentSentence = 0;
+                    uiManager.AskSomething(choices);
+                }
             }
             else
             {
-                currentCharacterState = CharacterState.Asking;
-                currentSentence = 0;
-                uiManager.AskSomething(choices);
+                if (currentSentence < introSentences.Count)
+                {
+                    uiManager.ChangeChatBoxText(introSentences[currentSentence]);
+                    currentSentence++;
+                }
+                else
+                {
+                    currentCharacterState = CharacterState.Asking;
+                    currentSentence = 0;
+                    alreadyIntroduceOnce = true;
+                    uiManager.AskSomething(choices);
+                }
             }
+
         }
         if (currentCharacterState == CharacterState.Succeed)
         {
             if (currentSentence < rightChoiceSentences.Count)
             {
-                uiManager.ChangeChatBoxtext(rightChoiceSentences[currentSentence]);
+                uiManager.ChangeChatBoxText(rightChoiceSentences[currentSentence]);
                 currentSentence++;
             }
             else
             {
                 currentCharacterState = CharacterState.Walking;
                 currentSentence = 0;
+                gameObject.layer = 0;
+                for (int i = 0; i < transform.childCount; i++)
+                {
+                    transform.GetChild(i).gameObject.layer = 0;
+                }
                 GameManager.Instance.ChangeState(GameManager.GameState.Walking);
+                //alreadyGiveTheirMemory = true;
             }
         }
         if (currentCharacterState == CharacterState.Fail)
         {
             if (currentSentence < badChoiceSentences.Count)
             {
-                uiManager.ChangeChatBoxtext(badChoiceSentences[currentSentence]);
+                uiManager.ChangeChatBoxText(badChoiceSentences[currentSentence]);
                 currentSentence++;
             }
             else
@@ -112,6 +145,8 @@ public class TalkableCharacter : MonoBehaviour
         {
             currentCharacterState = CharacterState.Fail;
         }
+
+        choices.RemoveAt(choice);
 
         LetsTalk();
     }
