@@ -147,6 +147,7 @@ public class TalkableCharacter : MonoBehaviour
         }
 
         choices.RemoveAt(choice);
+        //uiManager.FadeWhite(true);
 
         LetsTalk();
     }

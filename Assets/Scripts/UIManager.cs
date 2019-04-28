@@ -22,6 +22,9 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private Image lockedCursor = null;
 
+    [SerializeField]
+    private CanvasGroup tellMemoryCanvas = null;
+
     public TalkableCharacter CurrentTalkableCharacter;
 
     private string currentSentence;
@@ -125,5 +128,11 @@ public class UIManager : MonoBehaviour
         }
 
         CurrentTalkableCharacter.CheckRightChoice(choiceindex);
+    }
+
+    public void FadeWhite(bool toWhite)
+    {
+        tellMemoryCanvas.DOFade(toWhite ? 1f : 0f, 1f).SetEase(Ease.OutCubic);
+        tellMemoryCanvas.interactable = toWhite;
     }
 }

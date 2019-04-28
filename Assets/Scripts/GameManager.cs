@@ -6,7 +6,8 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     public enum GameState
     {
         Walking,
-        Talking
+        Talking,
+        SayingMemory
     }
 
     public Action<GameState> onGameStateChanged;
