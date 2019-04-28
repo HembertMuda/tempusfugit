@@ -3,7 +3,7 @@
 public class Door : MonoBehaviour
 {
     [SerializeField]
-    private Animator doorAnimator;
+    private Animator doorAnimator = null;
 
     public bool isOpened;
 

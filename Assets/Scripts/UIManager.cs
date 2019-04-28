@@ -1,15 +1,34 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using DG.Tweening;
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
     [SerializeField]
-    private Text interactionText;
+    private TextMeshProUGUI interactionText = null;
+
+    [SerializeField]
+    private CanvasGroup dialogueBoxCanvasGroup = null;
+
+    [SerializeField]
+    private TextMeshProUGUI chatBoxText = null;
+
+    [SerializeField]
+    private List<TextMeshProUGUI> choicesText = null;
+
+    public TalkableCharacter CurrentTalkableCharacter;
+
+    private string currentSentence;
+
+    private Coroutine talkCoroutine;
 
     void Start()
     {
-        FindObjectOfType<Player>().onInteractionLayerChanged += ChangeInteractionText;
-        GameManager.Instance.onGameStateChanged += HideInteractionText;
+        Player player = FindObjectOfType<Player>();
+        player.onInteractionLayerChanged += ChangeInteractionText;
+        GameManager.Instance.onGameStateChanged += OnGamestateChanged;
     }
 
     void ChangeInteractionText(int interactionLayer)
@@ -28,8 +47,62 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    void HideInteractionText(GameManager.GameState newGameState)
+    void OnGamestateChanged(GameManager.GameState newGameState)
     {
         ChangeInteractionText(0);
+
+        dialogueBoxCanvasGroup.DOFade(1f, 0.5f).SetEase(Ease.OutCubic);
+    }
+
+    public void ChangeChatBoxtext(string sentence)
+    {
+        chatBoxText.text = string.Empty;
+        talkCoroutine = StartCoroutine(DrawDialogue(sentence));
+    }
+
+    private IEnumerator DrawDialogue(string sentence)
+    {
+        int charCount = 0;
+        currentSentence = sentence;
+        while (chatBoxText.text != sentence)
+        {
+            charCount++;
+            chatBoxText.text = sentence.Substring(0, charCount);
+            yield return new WaitForSeconds(0.05f);
+        }
+        talkCoroutine = null;
+    }
+
+    public void OnNextButtonClicked()
+    {
+        if (talkCoroutine != null)
+        {
+            StopCoroutine(talkCoroutine);
+            talkCoroutine = null;
+            chatBoxText.text = currentSentence;
+        }
+        else
+        {
+            CurrentTalkableCharacter.LetsTalk();
+        }
+    }
+
+    public void AskSomething(List<string> choices)
+    {
+        chatBoxText.text = string.Empty;
+
+        for (int i = 0; i < choicesText.Count; i++)
+        {
+            if (i < choices.Count)
+            {
+                choicesText[i].gameObject.SetActive(true);
+                choicesText[i].text = choices[i];
+            }
+            else
+            {
+
+                choicesText[i].gameObject.SetActive(false);
+            }
+        }
     }
 }

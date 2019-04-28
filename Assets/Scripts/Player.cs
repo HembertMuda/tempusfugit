@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     private Transform camTransform = null;
 
     [SerializeField]
-    private LayerMask interactionLayerMask;
+    private LayerMask interactionLayerMask = 0;
 
     [SerializeField]
     private float checkGroundDistance = 0.1f;
@@ -46,8 +46,6 @@ public class Player : MonoBehaviour
     private void Start()
     {
         camRotXInit = camTransform.localEulerAngles.x;
-
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void FixedUpdate()
@@ -128,6 +126,8 @@ public class Player : MonoBehaviour
                 {
                     GameManager.Instance.ChangeState(GameManager.GameState.Talking);
                     GetComponentInChildren<PlayerCamera>().AdaptCam(talkableCharacter);
+                    FindObjectOfType<UIManager>().CurrentTalkableCharacter = talkableCharacter;
+                    talkableCharacter.LetsTalk();
                 }
             }
         }

@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 8429376359104108551}
   - component: {fileID: 1092317518429183}
   m_Layer: 10
-  m_Name: CharacterFish
+  m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,6 +76,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camFramingPoint: {fileID: 6489271868016881113}
+  introSentences:
+  - Hello! I am a big fish who wants some company.
+  - What's your name brow ?
 --- !u!1 &8429376359451524985
 GameObject:
   m_ObjectHideFlags: 0
