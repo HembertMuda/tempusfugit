@@ -13,7 +13,7 @@ public class TalkableCharacter : MonoBehaviour
     [SerializeField, TextArea]
     private List<string> otherIntroSentences = new List<string>();
 
-    [SerializeField, HideInInspector]
+    [SerializeField, ValueDropdown("MemoriesName")]
     public List<string> choicesName = new List<string>();
 
     [SerializeField]
@@ -31,11 +31,19 @@ public class TalkableCharacter : MonoBehaviour
     [SerializeField]
     public Sprite memoryIcon;
 
+    [SerializeField, FoldoutGroup("Sounds")]
+    AudioClip saysomething;
+
+    [SerializeField, FoldoutGroup("Sounds")]
+    AudioClip asksomething;
+
     private Transform playerTransform;
 
     private UIManager uiManager;
 
     private bool alreadyIntroduceOnce;
+
+    private AudioSource audioSource;
 
     //[HideInInspector]
     //public bool alreadyGiveTheirMemory;
@@ -58,6 +66,7 @@ public class TalkableCharacter : MonoBehaviour
     {
         playerTransform = FindObjectOfType<Player>().transform;
         uiManager = FindObjectOfType<UIManager>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -82,11 +91,15 @@ public class TalkableCharacter : MonoBehaviour
                 {
                     uiManager.ChangeChatBoxText(otherIntroSentences[currentSentence]);
                     currentSentence++;
+                    if (!audioSource.isPlaying)
+                        audioSource.PlayOneShot(saysomething);
                 }
                 else
                 {
                     CurrentCharacterState = CharacterState.Asking;
                     currentSentence = 0;
+                    if(!audioSource.isPlaying)
+                    audioSource.PlayOneShot(asksomething);
                     uiManager.AskSomething(choicesName);
                 }
             }
@@ -96,6 +109,8 @@ public class TalkableCharacter : MonoBehaviour
                 {
                     uiManager.ChangeChatBoxText(introSentences[currentSentence]);
                     currentSentence++;
+                    if (!audioSource.isPlaying)
+                        audioSource.PlayOneShot(saysomething);
                 }
                 else
                 {
@@ -113,6 +128,8 @@ public class TalkableCharacter : MonoBehaviour
             {
                 uiManager.ChangeChatBoxText(rightChoiceSentences[currentSentence]);
                 currentSentence++;
+                if (!audioSource.isPlaying)
+                    audioSource.PlayOneShot(saysomething);
             }
             else
             {
@@ -135,6 +152,7 @@ public class TalkableCharacter : MonoBehaviour
             {
                 uiManager.ChangeChatBoxText(badChoiceSentences[currentSentence]);
                 currentSentence++;
+                audioSource.PlayOneShot(saysomething);
             }
             else
             {
