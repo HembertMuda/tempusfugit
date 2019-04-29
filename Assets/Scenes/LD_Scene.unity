@@ -460,6 +460,16 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7571857668136834790, guid: edbf54d837606f6479d0c425021c35c9,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7571857668136834790, guid: edbf54d837606f6479d0c425021c35c9,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edbf54d837606f6479d0c425021c35c9, type: 3}
 --- !u!1 &221125803
@@ -2423,6 +2433,126 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.044, y: 0.001999999, z: 0.039999988}
   m_Center: {x: -0.007999999, y: -0.008999998, z: 0.021999994}
+--- !u!1001 &1178745613
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6954887887620934159, guid: 61a6b8d2419a73140b9efcf36da5c030,
+        type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625231243103060201, guid: 61a6b8d2419a73140b9efcf36da5c030,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625231243103060201, guid: 61a6b8d2419a73140b9efcf36da5c030,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625231243103060201, guid: 61a6b8d2419a73140b9efcf36da5c030,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625231243103060201, guid: 61a6b8d2419a73140b9efcf36da5c030,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625231243103060201, guid: 61a6b8d2419a73140b9efcf36da5c030,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625231243103060201, guid: 61a6b8d2419a73140b9efcf36da5c030,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625231243103060201, guid: 61a6b8d2419a73140b9efcf36da5c030,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625231243103060201, guid: 61a6b8d2419a73140b9efcf36da5c030,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625231243103060201, guid: 61a6b8d2419a73140b9efcf36da5c030,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625231243103060201, guid: 61a6b8d2419a73140b9efcf36da5c030,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625231243103060201, guid: 61a6b8d2419a73140b9efcf36da5c030,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989993813693477467, guid: 61a6b8d2419a73140b9efcf36da5c030,
+        type: 3}
+      propertyPath: Memories.Array.data[0].Sentences.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989993813693477467, guid: 61a6b8d2419a73140b9efcf36da5c030,
+        type: 3}
+      propertyPath: Memories.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989993813693477467, guid: 61a6b8d2419a73140b9efcf36da5c030,
+        type: 3}
+      propertyPath: Memories.Array.data[0].ChoiceText
+      value: I was driving by night when...
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989993813693477467, guid: 61a6b8d2419a73140b9efcf36da5c030,
+        type: 3}
+      propertyPath: Memories.Array.data[0].Sentences.Array.data[0]
+      value: "I was driving fast in the middle of the night. I was lost in the forest,
+        the one you see there, on this mountain outside. You see, I wasn\u2019t supposed
+        to be there."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989993813693477467, guid: 61a6b8d2419a73140b9efcf36da5c030,
+        type: 3}
+      propertyPath: Memories.Array.data[0].Sentences.Array.data[1]
+      value: I lied to my parents to see my lover.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989993813693477467, guid: 61a6b8d2419a73140b9efcf36da5c030,
+        type: 3}
+      propertyPath: Memories.Array.data[0].Sentences.Array.data[2]
+      value: 'As I was rushing to get home in time, snow started to fall.I had to
+        slow my car. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989993813693477467, guid: 61a6b8d2419a73140b9efcf36da5c030,
+        type: 3}
+      propertyPath: Memories.Array.data[0].Sentences.Array.data[3]
+      value: 'A herd of deers and hinds crossed the road and stopped in the middle
+        of the road. I stopped the car in panic. The hinds looked at me for a minute
+        that felt like an eternity. As suddenly as they appeared in my headlights
+        they vanished. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989993813693477467, guid: 61a6b8d2419a73140b9efcf36da5c030,
+        type: 3}
+      propertyPath: Memories.Array.data[0].Sentences.Array.data[4]
+      value: I was still hearing hooves on the road, but no hinds in sight.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989993813693477467, guid: 61a6b8d2419a73140b9efcf36da5c030,
+        type: 3}
+      propertyPath: Memories.Array.data[0].Name
+      value: I was driving by night when...
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 61a6b8d2419a73140b9efcf36da5c030, type: 3}
 --- !u!1 &1201179853 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100012, guid: 67da1b6409599e04dbfca48c0aeb442b,
