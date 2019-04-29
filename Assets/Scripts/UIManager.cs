@@ -8,6 +8,9 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     [SerializeField]
+    private float whiteFadeDuration = 2f;
+
+    [SerializeField]
     private TextMeshProUGUI interactionText = null;
 
     [SerializeField]
@@ -32,11 +35,13 @@ public class UIManager : MonoBehaviour
 
     private string currentSentence;
 
-    private string currentMemorySentence;
+    private Memory currentMemory;
+
+    private int currentMemorySentenceindex;
 
     private Coroutine talkCoroutine;
     
-    private Coroutine memoryCoroutine;
+    //private Coroutine memoryCoroutine; 
 
     void Start()
     {
@@ -111,11 +116,12 @@ public class UIManager : MonoBehaviour
 
     public void OnMemoryNextButtonClicked()
     {
-        if (memoryCoroutine != null)
+        if (currentMemorySentenceindex < currentMemory.Sentences.Count)
         {
-            StopCoroutine(memoryCoroutine);
-            memoryCoroutine = null;
-            tellMemoryText.text = currentMemorySentence;
+            //StopCoroutine(memoryCoroutine);
+            //memoryCoroutine = null;
+            LetsTalkMemory();
+            //tellMemoryText.text = currentMemorySentence;
         }
         else
         {
@@ -154,34 +160,44 @@ public class UIManager : MonoBehaviour
 
     public void FadeWhite(bool toWhite)
     {
-        tellMemoryCanvas.DOFade(toWhite ? 1f : 0f, 1f).SetEase(Ease.OutCubic);
+        tellMemoryCanvas.DOFade(toWhite ? 1f : 0f, whiteFadeDuration).SetEase(Ease.OutCubic);
         tellMemoryCanvas.interactable = toWhite;
     }
 
     public void TellMemory(Memory memory)
     {
+        currentMemorySentenceindex = 0;
         string memoryText = string.Empty;
-        for (int i = 0; i < memory.Sentences.Count; i++)
-        {
-            if (i > 0)
-                memoryText = memoryText + "\n\n";
-            memoryText = memoryText + memory.Sentences[i];
-        }
-        //tellMemoryText.text = memoryText;
+        currentMemory = memory;
 
-        memoryCoroutine = StartCoroutine(DrawMemory(memoryText));
+        LetsTalkMemory();
+
+        //memoryCoroutine = StartCoroutine(DrawMemory(memoryText));
     }
 
-    private IEnumerator DrawMemory(string sentence)
+    public void LetsTalkMemory()
     {
-        int charCount = 0;
-        currentMemorySentence = sentence;
-        while (tellMemoryText.text != sentence)
-        {
-            charCount++;
-            tellMemoryText.text = sentence.Substring(0, charCount);
-            yield return new WaitForSeconds(0.05f);
-        }
-        memoryCoroutine = null;
+        if (currentMemorySentenceindex > 0)
+            tellMemoryText.text = tellMemoryText.text + "\n\n";
+        tellMemoryText.text = tellMemoryText.text + currentMemory.Sentences[currentMemorySentenceindex];
+        currentMemorySentenceindex++;
+
+        //if(currentMemorySentenceindex == currentMemory.Sentences.Count)
+
+
+        //tellMemoryText.text = memoryText;
     }
+
+    //private IEnumerator DrawMemory(string sentence)
+    //{
+    //    int charCount = 0;
+    //    currentMemorySentence = sentence;
+    //    while (tellMemoryText.text != sentence)
+    //    {
+    //        charCount++;
+    //        tellMemoryText.text = sentence.Substring(0, charCount);
+    //        yield return new WaitForSeconds(0.05f);
+    //    }
+    //    memoryCoroutine = null;
+    //}
 }

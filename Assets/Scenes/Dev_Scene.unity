@@ -533,6 +533,11 @@ PrefabInstance:
       propertyPath: choicesName.Array.data[3]
       value: Sheep love 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2969930286553094544, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: camFramingPoint
+      value: 
+      objectReference: {fileID: 2097781001}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d43c27fc747a76e42a7dc1368793c46a, type: 3}
 --- !u!4 &1197181687 stripped
@@ -859,6 +864,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 153537366805280526, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
     type: 3}
   m_PrefabInstance: {fileID: 977856053}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2097781001 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8302993707369877430, guid: d43c27fc747a76e42a7dc1368793c46a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1168958741}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7601079633750636
 PrefabInstance:
