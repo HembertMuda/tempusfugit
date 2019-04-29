@@ -1,7 +1,9 @@
 ﻿using DG.Tweening;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Player : MonoBehaviour
 {
@@ -35,6 +37,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     public List<string> playerMemoriesNames = new List<string>();
 
+    [SerializeField]
+    private List<AudioClip>footstepClips;
+
     private float moveHorizontal;
     private float moveVertical;
 
@@ -47,6 +52,10 @@ public class Player : MonoBehaviour
     private int interactionLayer;
     private Vector3 camLocalPosInit;
 
+    private AudioSource audioSource;
+
+    private Coroutine footstepCor;
+
     public Action<int> onInteractionLayerChanged;
 
     private void Start()
@@ -54,13 +63,27 @@ public class Player : MonoBehaviour
         camRotXInit = camTransform.localEulerAngles.x;
         camLocalPosInit = camTransform.localPosition;
         GameManager.Instance.onGameStateChanged += OnGameStateChanged;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
     {
+        Vector3 moveDirection = new Vector3(moveHorizontal, 0, moveVertical);
+        if(moveDirection.magnitude > 0.8f)
+        {
+            if(footstepCor == null)
+                footstepCor = StartCoroutine(PlayFootstep());
+        }
+        else 
+        {
+            if (footstepCor != null)
+            {
+                StopCoroutine(footstepCor);
+                footstepCor = null;
+            }
+        }
         if (GameManager.Instance.CurrentGameState == GameManager.GameState.Walking)
         {
-            Vector3 moveDirection = new Vector3(moveHorizontal, 0, moveVertical);
             if (moveDirection.magnitude > 0.1f)
             {
                 moveDirection = new Vector3(moveDirection.x * moveSpeed, playerRigidbody.velocity.y, moveDirection.z * moveSpeed);
@@ -69,6 +92,7 @@ public class Player : MonoBehaviour
                 playerRigidbody.MovePosition(playerRigidbody.position + moveDirection);
             }
         }
+
     }
 
     private void Update()
@@ -143,6 +167,15 @@ public class Player : MonoBehaviour
     {
         camTransform.DOMove(talkableCharacter.camFramingPoint.position, 1f).SetEase(Ease.OutCubic);
         camTransform.DORotate(talkableCharacter.camFramingPoint.eulerAngles, 1f).SetEase(Ease.OutCubic);
+    }
+
+    IEnumerator PlayFootstep()
+    {
+        while(true)
+        {
+            audioSource.PlayOneShot(footstepClips[Random.Range(0, footstepClips.Count)]);
+            yield return new WaitForSeconds(0.5f);
+        }
     }
 
     void OnGameStateChanged(GameManager.GameState newGameState)

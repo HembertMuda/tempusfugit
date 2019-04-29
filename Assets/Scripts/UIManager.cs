@@ -197,6 +197,7 @@ public class UIManager : MonoBehaviour
     public void TellMemory(Memory memory)
     {
         currentMemorySentenceindex = 0;
+        tellMemoryText.text = string.Empty;
         string memoryText = string.Empty;
         currentMemory = memory;
 

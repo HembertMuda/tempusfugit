@@ -13,7 +13,7 @@ public class TalkableCharacter : MonoBehaviour
     [SerializeField, TextArea]
     private List<string> otherIntroSentences = new List<string>();
 
-    [SerializeField, ValueDropdown("MemoriesName")]
+    [SerializeField, ValueDropdown("MemoriesName")  ]
     public List<string> choicesName = new List<string>();
 
     [SerializeField]
