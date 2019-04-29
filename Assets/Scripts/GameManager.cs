@@ -37,10 +37,16 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
         }
     }
 
+    protected override void Awake()
+    {
+        DestroyOnLoad = true;
+        base.Awake();
+    }
+
     private void Start()
     {
         cursor = Resources.Load("LD_Icons_Curseur_Small") as Texture2D;
-        //Cursor.SetCursor(cursor, Vector2.zero, CursorMode.ForceSoftware);
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.ForceSoftware);
         Cursor.lockState = CursorLockMode.Locked;
     }
 

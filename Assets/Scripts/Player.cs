@@ -1,5 +1,6 @@
 ﻿using DG.Tweening;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -30,6 +31,9 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private float checkInteractionDistance = 1f;
+
+    [SerializeField]
+    public List<string> playerMemoriesNames = new List<string>();
 
     private float moveHorizontal;
     private float moveVertical;

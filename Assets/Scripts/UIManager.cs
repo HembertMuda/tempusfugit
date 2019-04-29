@@ -31,6 +31,15 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI tellMemoryText = null;
 
+    [SerializeField]
+    private Transform memoriesIconParent = null;
+
+    [SerializeField]
+    public Transform vignetteIconParent = null;
+
+    [SerializeField]
+    private GameObject vignettePrefab = null;
+
     public TalkableCharacter CurrentTalkableCharacter;
 
     private string currentSentence;
@@ -123,10 +132,17 @@ public class UIManager : MonoBehaviour
             LetsTalkMemory();
             //tellMemoryText.text = currentMemorySentence;
         }
-        else
+        else 
         {
-            FadeWhite(false);
+            if (CurrentTalkableCharacter.GetComponent<InspectorEnd>() == null)
+            {
+                FadeWhite(false);
             CurrentTalkableCharacter.LetsTalk();
+            }
+            else
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+            }
         }
     }
 
@@ -139,7 +155,14 @@ public class UIManager : MonoBehaviour
             if (i < choices.Count)
             {
                 choicesText[i].transform.parent.gameObject.SetActive(true);
-                choicesText[i].text = GameManager.Instance.GetMemoryByName(choices[i]).ChoiceText;
+                if(CurrentTalkableCharacter.GetComponent<InspectorEnd>() == null)
+                {
+                    choicesText[i].text = GameManager.Instance.GetMemoryByName(choices[i]).ChoiceText;
+                }
+                else
+                {
+                    choicesText[i].text = choices[i];
+                }
             }
             else
             {
@@ -160,7 +183,14 @@ public class UIManager : MonoBehaviour
 
     public void FadeWhite(bool toWhite)
     {
-        tellMemoryCanvas.DOFade(toWhite ? 1f : 0f, whiteFadeDuration).SetEase(Ease.OutCubic);
+        tellMemoryCanvas.DOFade(toWhite ? 1f : 0f, whiteFadeDuration).SetEase(Ease.OutCubic).OnComplete(() => 
+            {
+                if(!toWhite)
+                {
+                    CurrentTalkableCharacter.CurrentCharacterState = TalkableCharacter.CharacterState.Succeed;
+                    CurrentTalkableCharacter.LetsTalk();
+                }
+            });
         tellMemoryCanvas.interactable = toWhite;
     }
 
@@ -200,4 +230,26 @@ public class UIManager : MonoBehaviour
     //    }
     //    memoryCoroutine = null;
     //}
+
+    public void GiveMemory(Sprite memorySprite)
+    {
+        RectTransform vignetteTransform = Instantiate(vignettePrefab, vignetteIconParent).GetComponent<RectTransform>();
+        vignetteTransform.GetComponent<Image>().sprite = memorySprite;
+        vignetteTransform.DOMove(memoriesIconParent.GetChild(vignetteIconParent.childCount - 1).GetComponent<RectTransform>().position, 1f).SetEase(Ease.OutCubic);
+    }
+
+    private void Update()
+    {
+        if(Input.GetMouseButtonDown(0) && GameManager.Instance.CurrentGameState == GameManager.GameState.Talking && CurrentTalkableCharacter != null)
+        {
+            if(CurrentTalkableCharacter.CurrentCharacterState == TalkableCharacter.CharacterState.Listening)
+            {
+                OnMemoryNextButtonClicked();
+            }
+            else
+            {
+                OnNextButtonClicked();
+            }
+        }
+    }
 }
