@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
 public class TalkableCharacter : MonoBehaviour
 {
@@ -9,11 +10,11 @@ public class TalkableCharacter : MonoBehaviour
     [SerializeField, TextArea]
     private List<string> introSentences = new List<string>();
 
-    [SerializeField, TextArea]
+    [SerializeField, TextArea, ValueDropdown("MemoriesName")]
     private List<string> otherIntroSentences = new List<string>();
 
-    [SerializeField, TextArea]
-    private List<string> choices = new List<string>();
+    [SerializeField]
+    private List<string> choicesName = new List<string>();
 
     [SerializeField]
     private int rightChoice = 0;
@@ -79,7 +80,7 @@ public class TalkableCharacter : MonoBehaviour
                 {
                     currentCharacterState = CharacterState.Asking;
                     currentSentence = 0;
-                    uiManager.AskSomething(choices);
+                    uiManager.AskSomething(choicesName);
                 }
             }
             else
@@ -94,7 +95,7 @@ public class TalkableCharacter : MonoBehaviour
                     currentCharacterState = CharacterState.Asking;
                     currentSentence = 0;
                     alreadyIntroduceOnce = true;
-                    uiManager.AskSomething(choices);
+                    uiManager.AskSomething(choicesName);
                 }
             }
 
@@ -139,16 +140,29 @@ public class TalkableCharacter : MonoBehaviour
     {
         if (choice == rightChoice)
         {
+            uiManager.FadeWhite(true);
             currentCharacterState = CharacterState.Succeed;
+            uiManager.TellMemory(GameManager.Instance.GetMemoryByName(choicesName[choice]));
         }
         else
         {
             currentCharacterState = CharacterState.Fail;
+            LetsTalk();
         }
 
-        choices.RemoveAt(choice);
-        //uiManager.FadeWhite(true);
+        choicesName.RemoveAt(choice);
 
-        LetsTalk();
+    }
+
+    private List<string> MemoriesName()
+    {
+        List<string> memories = new List<string>();
+
+        foreach (Memory memory in GameManager.Instance.Memories)
+        {
+            memories.Add(memory.Name);
+        }
+
+        return memories;
     }
 }

@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6954887887620934159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3625231243103060201}
+  - component: {fileID: 8989993813693477467}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3625231243103060201
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6954887887620934159}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8989993813693477467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6954887887620934159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dca23d3f93c00b14582460719eace90c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Memories:
+  - Name: Sheep love
+    ChoiceText: Let's talk about Sheep love
+    Sentences:
+    - 'My first girlfriend was a wild sheep. Like many wild sheeps of her age, she
+      smelt bad, and her fur was always a mess. She was a bad sheep. These are the
+      very first things I would notice when she would pick me up in her brand new
+      car. I would get in, kiss her and smell cigarettes and booze in her breath.
+      Then, I would gently touch her coarse fur. I felt powerful and limitless. '
+    - "This memory got buried with her a long time ago, after she died. But last year,
+      a regular dream brought it back. \r\nIn this dream, I hear someone knocking
+      on my door in the middle of the night. I get up and I walk to the door. I open
+      it, it is pitch black. I can\u2019t see, but I smell cigarettes and booze. I
+      stretch my arm out the door frame, and I feel a rough, coarse fur."
+  - Name: Sheep love 2
+    ChoiceText: Let's talk about Sheep love 2
+    Sentences:
+    - 'My first girlfriend was a wild sheep. Like many wild sheeps of her age, she
+      smelt bad, and her fur was always a mess. She was a bad sheep. These are the
+      very first things I would notice when she would pick me up in her brand new
+      car. I would get in, kiss her and smell cigarettes and booze in her breath.
+      Then, I would gently touch her coarse fur. I felt powerful and limitless. '
+    - "This memory got buried with her a long time ago, after she died. But last year,
+      a regular dream brought it back. \r\nIn this dream, I hear someone knocking
+      on my door in the middle of the night. I get up and I walk to the door. I open
+      it, it is pitch black. I can\u2019t see, but I smell cigarettes and booze. I
+      stretch my arm out the door frame, and I feel a rough, coarse fur."
+  - Name: Sheep love 3
+    ChoiceText: Let's talk about Sheep love 3
+    Sentences:
+    - 'My first girlfriend was a wild sheep. Like many wild sheeps of her age, she
+      smelt bad, and her fur was always a mess. She was a bad sheep. These are the
+      very first things I would notice when she would pick me up in her brand new
+      car. I would get in, kiss her and smell cigarettes and booze in her breath.
+      Then, I would gently touch her coarse fur. I felt powerful and limitless. '
+    - "This memory got buried with her a long time ago, after she died. But last year,
+      a regular dream brought it back. \r\nIn this dream, I hear someone knocking
+      on my door in the middle of the night. I get up and I walk to the door. I open
+      it, it is pitch black. I can\u2019t see, but I smell cigarettes and booze. I
+      stretch my arm out the door frame, and I feel a rough, coarse fur."
+  - Name: Sheep love 4
+    ChoiceText: Let's talk about Sheep love 4
+    Sentences:
+    - 'My first girlfriend was a wild sheep. Like many wild sheeps of her age, she
+      smelt bad, and her fur was always a mess. She was a bad sheep. These are the
+      very first things I would notice when she would pick me up in her brand new
+      car. I would get in, kiss her and smell cigarettes and booze in her breath.
+      Then, I would gently touch her coarse fur. I felt powerful and limitless. '
+    - "This memory got buried with her a long time ago, after she died. But last year,
+      a regular dream brought it back. \r\nIn this dream, I hear someone knocking
+      on my door in the middle of the night. I get up and I walk to the door. I open
+      it, it is pitch black. I can\u2019t see, but I smell cigarettes and booze. I
+      stretch my arm out the door frame, and I feel a rough, coarse fur."

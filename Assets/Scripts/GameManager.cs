@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Sirenix.OdinInspector;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviourSingleton<GameManager>
@@ -9,6 +11,9 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
         Talking,
         SayingMemory
     }
+
+    [SerializeField, BoxGroup("Memories")]
+    public List<Memory> Memories = new List<Memory>();
 
     public Action<GameState> onGameStateChanged;
 
@@ -42,5 +47,18 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     private void Update()
     {
         //Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
+    }
+
+    public Memory GetMemoryByName(string name)
+    {
+        for (int i = 0; i < Memories.Count; i++)
+        {
+            if (Memories[i].Name == name)
+                return Memories[i];
+        }
+
+        Debug.LogError($"The memory {name} does not exist, check memories name on GameManager");
+
+        return null;
     }
 }

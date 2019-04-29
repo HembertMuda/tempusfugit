@@ -25,11 +25,18 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private CanvasGroup tellMemoryCanvas = null;
 
+    [SerializeField]
+    private TextMeshProUGUI tellMemoryText = null;
+
     public TalkableCharacter CurrentTalkableCharacter;
 
     private string currentSentence;
 
+    private string currentMemorySentence;
+
     private Coroutine talkCoroutine;
+    
+    private Coroutine memoryCoroutine;
 
     void Start()
     {
@@ -102,6 +109,21 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void OnMemoryNextButtonClicked()
+    {
+        if (memoryCoroutine != null)
+        {
+            StopCoroutine(memoryCoroutine);
+            memoryCoroutine = null;
+            tellMemoryText.text = currentMemorySentence;
+        }
+        else
+        {
+            FadeWhite(false);
+            CurrentTalkableCharacter.LetsTalk();
+        }
+    }
+
     public void AskSomething(List<string> choices)
     {
         chatBoxText.text = string.Empty;
@@ -111,7 +133,7 @@ public class UIManager : MonoBehaviour
             if (i < choices.Count)
             {
                 choicesText[i].transform.parent.gameObject.SetActive(true);
-                choicesText[i].text = choices[i];
+                choicesText[i].text = GameManager.Instance.GetMemoryByName(choices[i]).ChoiceText;
             }
             else
             {
@@ -134,5 +156,32 @@ public class UIManager : MonoBehaviour
     {
         tellMemoryCanvas.DOFade(toWhite ? 1f : 0f, 1f).SetEase(Ease.OutCubic);
         tellMemoryCanvas.interactable = toWhite;
+    }
+
+    public void TellMemory(Memory memory)
+    {
+        string memoryText = string.Empty;
+        for (int i = 0; i < memory.Sentences.Count; i++)
+        {
+            if (i > 0)
+                memoryText = memoryText + "\n\n";
+            memoryText = memoryText + memory.Sentences[i];
+        }
+        //tellMemoryText.text = memoryText;
+
+        memoryCoroutine = StartCoroutine(DrawMemory(memoryText));
+    }
+
+    private IEnumerator DrawMemory(string sentence)
+    {
+        int charCount = 0;
+        currentMemorySentence = sentence;
+        while (tellMemoryText.text != sentence)
+        {
+            charCount++;
+            tellMemoryText.text = sentence.Substring(0, charCount);
+            yield return new WaitForSeconds(0.05f);
+        }
+        memoryCoroutine = null;
     }
 }
