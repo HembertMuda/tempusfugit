@@ -119,23 +119,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
       propertyPath: choices.Array.size
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
       propertyPath: rightChoiceSentences.Array.size
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
       propertyPath: badChoiceSentences.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
       propertyPath: otherIntroSentences.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
       propertyPath: introSentences.Array.size
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
       propertyPath: choices.Array.data[0]
@@ -175,11 +175,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
       propertyPath: introSentences.Array.data[0]
-      value: Hello !
+      value: "Next stop : Pougne-le-H\xE9risson. All passengers, show me your ticket
+        please."
       objectReference: {fileID: 0}
     - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
       propertyPath: introSentences.Array.data[1]
-      value: What's your name ?
+      value: You lost your ticket?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: camFramingPoint
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: introSentences.Array.data[2]
+      value: "Well, you know the rule: you\u2019ll need to pay the fine."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: introSentences.Array.data[3]
+      value: "Let\u2019s see... "
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: introSentences.Array.data[4]
+      value: "Yeah, four, that\u2019s it."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: introSentences.Array.data[5]
+      value: You need to collect four different memories from passengers.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: introSentences.Array.data[6]
+      value: "That\u2019s the price!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: introSentences.Array.data[7]
+      value: "I\u2019ll wait for you at the head wagon, the one after the bar wagon. "
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}

@@ -152,5 +152,137 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 931a2cab402aa1943a3a79c8c2dbd7e1, type: 2}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: introSentences.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: otherIntroSentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: choices.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: badChoiceSentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: camFramingPoint
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: introSentences.Array.data[0]
+      value: Hello Dear!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: introSentences.Array.data[1]
+      value: Nothing feels better than travelling in a train with few passengers.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: introSentences.Array.data[2]
+      value: 'I feel a strong connection with them. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: introSentences.Array.data[3]
+      value: Even with the dead one.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: introSentences.Array.data[4]
+      value: 'Do you remember meeting a ghost? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: introSentences.Array.data[5]
+      value: Because I do.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: otherIntroSentences.Array.data[0]
+      value: 'Do you remember meeting a ghost? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: otherIntroSentences.Array.data[1]
+      value: Because I do.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: choices.Array.data[0]
+      value: Driving in the night
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: choices.Array.data[1]
+      value: The coffin that took too much space
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: choices.Array.data[2]
+      value: Aunt Elina telling a story
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[0]
+      value: My first girlfriend was a wild sheep.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[1]
+      value: Like many wild sheeps of her age, she smelt bad, and her fur was always
+        a mess.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[2]
+      value: These are the very first things I would notice when she would pick me
+        up in her brand new car.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[3]
+      value: ' I would get in, kiss her and smell cigarettes and booze in her breath.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[4]
+      value: Then, I would gently touch her coarse fur. With her, I felt powerful
+        and limitless.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[5]
+      value: This memory got buried with her a long time ago, after she died.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[6]
+      value: But a dream brought her back.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[7]
+      value: In this dream, I hear someone knocking on my door in the middle of the
+        night.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[8]
+      value: I get up and I walk to the door.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[9]
+      value: I open it, it is pitch black.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[10]
+      value: "I can\u2019t see, but I smell."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[11]
+      value: Cigarettes and booze.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[12]
+      value: ' I stretch my arm out the door frame, and I feel.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[13]
+      value: 'A rough, coarse fur. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: badChoiceSentences.Array.data[0]
+      value: There is no ghost in this story...
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}

@@ -112,6 +112,356 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &8239591
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3066135271553662760, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: m_Name
+      value: CharacterArbre
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066135271553662761, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066135271553662761, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066135271553662761, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066135271553662761, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066135271553662761, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066135271553662761, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066135271553662761, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066135271553662761, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066135271553662761, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066135271553662761, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -151.641
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066135271553662761, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.size
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: introSentences.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: choices.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: otherIntroSentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: badChoiceSentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[0]
+      value: I am sorry for your loss.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[1]
+      value: I, too, lost something dear to me.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[2]
+      value: "I\u2019m obsessed with the memory of my hometown."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[3]
+      value: An ancient, elegant town. High buildings, faded red facades.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[4]
+      value: The luxurious vegetation that gave the city its eerie charm.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[5]
+      value: Ivy climbing along the old stone walls and the houses.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[7]
+      value: Wistaria providing cover from the sun in the inner courtyards.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[6]
+      value: Rose shrubs growing around the wells of the city.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[8]
+      value: (they look in the distance)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[9]
+      value: My last day in my hometown was a holiday.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[10]
+      value: The sky was blue, the air was sweet and warm.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[11]
+      value: The streets were filled by flocks of people with colorful dresses and
+        happy faces.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[12]
+      value: "They all had bouquets in their arms and flowers in their hair. \r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[13]
+      value: 'Then the explosion. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[14]
+      value: the waves of water filling the streets
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[15]
+      value: the screams.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[16]
+      value: These are the last things I remember from my hometown.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: introSentences.Array.data[0]
+      value: "\u201CI long for scenes where man hath never trod"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: introSentences.Array.data[1]
+      value: A place where woman never smiled or wept,
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: introSentences.Array.data[2]
+      value: There to abide and sleep as I in childhood sweetly slept
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: introSentences.Array.data[3]
+      value: Untroubling and untroubled where I lie
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: introSentences.Array.data[4]
+      value: ' the grass below - '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: introSentences.Array.data[5]
+      value: "above the vaulted sky\u2026\u201D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: introSentences.Array.data[6]
+      value: ' -John Clare'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: choices.Array.data[0]
+      value: Driving in the night
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: choices.Array.data[1]
+      value: The coffin that took too much space
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: choices.Array.data[2]
+      value: Aunt Elina telling a story
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: otherIntroSentences.Array.data[0]
+      value: Tell me the saddest thing you have witnessed, stranger.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: rightChoice
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: introSentences.Array.data[7]
+      value: Tell me the saddest thing you have witnessed, stranger.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[17]
+      value: Since this day, I wander and travel to find a city that looks like my
+        dear vanished hometown.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[18]
+      value: "To finally be at peace somewhere in this world.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: badChoiceSentences.Array.data[0]
+      value: Maybe I am getting insensitive as I am older, but I felt nothing...
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dafeed7499d849e4690a4ba306e604d8, type: 3}
+--- !u!1001 &35269184
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7011276382224034685, guid: edbf54d837606f6479d0c425021c35c9,
+        type: 3}
+      propertyPath: m_Name
+      value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 374204874583607246, guid: edbf54d837606f6479d0c425021c35c9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 374204874583607246, guid: edbf54d837606f6479d0c425021c35c9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 374204874583607246, guid: edbf54d837606f6479d0c425021c35c9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 374204874583607246, guid: edbf54d837606f6479d0c425021c35c9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 374204874583607246, guid: edbf54d837606f6479d0c425021c35c9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 374204874583607246, guid: edbf54d837606f6479d0c425021c35c9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 374204874583607246, guid: edbf54d837606f6479d0c425021c35c9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 374204874583607246, guid: edbf54d837606f6479d0c425021c35c9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 374204874583607246, guid: edbf54d837606f6479d0c425021c35c9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 374204874583607246, guid: edbf54d837606f6479d0c425021c35c9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 374204874583607246, guid: edbf54d837606f6479d0c425021c35c9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6545221826825781855, guid: edbf54d837606f6479d0c425021c35c9,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6545221826825781855, guid: edbf54d837606f6479d0c425021c35c9,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041527239906385877, guid: edbf54d837606f6479d0c425021c35c9,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041527239906385877, guid: edbf54d837606f6479d0c425021c35c9,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: edbf54d837606f6479d0c425021c35c9, type: 3}
 --- !u!1 &221125803
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,7 +657,7 @@ Transform:
   m_LocalScale: {x: 7.5177, y: 7.5177, z: 7.5177}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &514203388
 GameObject:
@@ -398,8 +748,168 @@ Transform:
   m_LocalScale: {x: 1.9569443, y: 0.121560805, z: 0.6952}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: 0}
+--- !u!1001 &603922087
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6759770599166900841, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: m_Name
+      value: CharacterFish
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759770599166900840, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759770599166900840, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759770599166900840, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759770599166900840, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759770599166900840, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759770599166900840, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759770599166900840, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759770599166900840, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759770599166900840, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759770599166900840, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 133.50601
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759770599166900840, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969930286553094544, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: introSentences.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969930286553094544, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: otherIntroSentences.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969930286553094544, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: choices.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969930286553094544, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969930286553094544, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: badChoiceSentences.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969930286553094544, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: introSentences.Array.data[0]
+      value: "Next stop : Pougne-le-H\xE9risson. All passengers, show me your ticket
+        please."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969930286553094544, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: introSentences.Array.data[1]
+      value: You lost your ticket?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969930286553094544, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: introSentences.Array.data[2]
+      value: "Well, you know the rule: you\u2019ll need to pay the fine."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969930286553094544, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: introSentences.Array.data[3]
+      value: "Let\u2019s see... "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969930286553094544, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: introSentences.Array.data[4]
+      value: "Yeah, four, that\u2019s it."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969930286553094544, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: introSentences.Array.data[5]
+      value: You need to collect four different memories from passengers.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969930286553094544, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: introSentences.Array.data[6]
+      value: "That\u2019s the price!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969930286553094544, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: introSentences.Array.data[7]
+      value: "I\u2019ll wait for you at the head wagon, the one after the bar wagon. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969930286553094544, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: choices.Array.data[0]
+      value: Camille
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969930286553094544, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: choices.Array.data[1]
+      value: Camille
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969930286553094544, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: choices.Array.data[2]
+      value: Camille
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969930286553094544, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[0]
+      value: See you!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969930286553094544, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[1]
+      value: See you!
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d43c27fc747a76e42a7dc1368793c46a, type: 3}
 --- !u!1 &630773071
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,11 +1078,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3258338081891492703, guid: 4efe930964984224885d1487cfe5ded8,
-        type: 3}
-      propertyPath: m_Name
-      value: Prefab_Door
-      objectReference: {fileID: 0}
     - target: {fileID: 7197412673020172930, guid: 4efe930964984224885d1487cfe5ded8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -611,7 +1116,7 @@ PrefabInstance:
     - target: {fileID: 7197412673020172930, guid: 4efe930964984224885d1487cfe5ded8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7197412673020172930, guid: 4efe930964984224885d1487cfe5ded8,
         type: 3}
@@ -627,6 +1132,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258338081891492703, guid: 4efe930964984224885d1487cfe5ded8,
+        type: 3}
+      propertyPath: m_Name
+      value: Prefab_Door
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4efe930964984224885d1487cfe5ded8, type: 3}
@@ -718,6 +1228,282 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1001 &754019902
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 153537366805280527, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: m_Name
+      value: CharacterRobot
+      objectReference: {fileID: 0}
+    - target: {fileID: 153537366805280526, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 153537366805280526, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1936096
+      objectReference: {fileID: 0}
+    - target: {fileID: 153537366805280526, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 153537366805280526, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 153537366805280526, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 153537366805280526, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 153537366805280526, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 153537366805280526, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 153537366805280526, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 153537366805280526, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 153537366805280526, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 153537366805280526, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.09201147
+      objectReference: {fileID: 0}
+    - target: {fileID: 153537366805280526, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.09201148
+      objectReference: {fileID: 0}
+    - target: {fileID: 153537366805280526, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.092011474
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: introSentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: otherIntroSentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: choices.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.size
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: badChoiceSentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: choices.Array.data[0]
+      value: Driving in the night
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: choices.Array.data[1]
+      value: The coffin that took too much space
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: choices.Array.data[2]
+      value: Aunt Elina telling a story
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[0]
+      value: 'Rare are the people able to leave such a mark. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[1]
+      value: "Mom got married with a sailor. At the time, it wasn\u2019t a good idea. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[2]
+      value: A robot, with a sailor!?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[3]
+      value: ' People would give us dirty looks in the streets.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[4]
+      value: "Tim didn\u2019t have kids."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[5]
+      value: "He was sad about it \u2018cause he wanted to teach how to be a good
+        sailor. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[6]
+      value: "That\u2019s how I learned about knots, tides, winds, everything!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[7]
+      value: But Mom would never let him take me on his one mast boat, a sloop.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[8]
+      value: She was scared.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[9]
+      value: "I don\u2019t blame her.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[10]
+      value: 'One day, Mom had to run errands outside the village. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[11]
+      value: Tim took this as a chance.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[12]
+      value: Together, we sailed for three hours.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[13]
+      value: I remember every second of it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[14]
+      value: 'For me, it felt like going on Andromeda. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[18]
+      value: "Tim and I never talked about it again. We didn\u2019t have to."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[17]
+      value: We moored before Mom came back.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[15]
+      value: 'We could go everywhere, nobody could stop us. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[16]
+      value: "I watched as far as my eyes could see. \r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[23]
+      value: "And today, I am going to the sea. \r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[22]
+      value: "And today, I am going to the sea. \r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[21]
+      value: 'He left me his sloop. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[20]
+      value: 'Tim died a few weeks ago. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[19]
+      value: 'I have never sailed again. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: introSentences.Array.data[0]
+      value: I am going to the sea.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: introSentences.Array.data[1]
+      value: "I haven\u2019t gone there for a long time."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: introSentences.Array.data[2]
+      value: What is the oldest memory you have from your childhood?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: otherIntroSentences.Array.data[0]
+      value: What is the oldest memory you have from your childhood?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: rightChoice
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: badChoiceSentences.Array.data[0]
+      value: I appreciate you told this story. But is it about someone who left a
+        mark?
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d, type: 3}
 --- !u!1 &799951626 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100008, guid: 67da1b6409599e04dbfca48c0aeb442b,
@@ -927,6 +1713,185 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 535d3c0285675164b9435cf6a3b30cb8, type: 3}
+--- !u!1001 &992588395
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2461026614687365615, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: m_Name
+      value: CharacterAubergine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2461026614687365614, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2461026614687365614, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2461026614687365614, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2461026614687365614, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2461026614687365614, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2461026614687365614, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2461026614687365614, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2461026614687365614, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2461026614687365614, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2461026614687365614, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180.00002
+      objectReference: {fileID: 0}
+    - target: {fileID: 2461026614687365614, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259892418635356694, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: introSentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259892418635356694, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259892418635356694, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: otherIntroSentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259892418635356694, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: badChoiceSentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259892418635356694, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: introSentences.Array.data[0]
+      value: "Oi! I\u2019m on my way to meet my wife and my mates from my marching
+        band for a picnic!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259892418635356694, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: introSentences.Array.data[1]
+      value: This marching band is my pride.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259892418635356694, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[0]
+      value: Ooh, I can feel the pride in your voice.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259892418635356694, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[1]
+      value: I am really happy for you...
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259892418635356694, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[2]
+      value: "My heart burst with pride whenever I think about the first time I pulled
+        on my marching band\u2019s uniform."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259892418635356694, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[3]
+      value: Back then, I was a young and good looking eggplant.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259892418635356694, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[4]
+      value: "Yes! I was a teenager and my town\u2019s fanfare orchestra recruited
+        me as their new tuba."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259892418635356694, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[5]
+      value: My parents were so happy and so was I!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259892418635356694, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[6]
+      value: "The uniform suited me perfectly, the orange hat felt just right, with
+        it\u2019s big green feather on top of it."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259892418635356694, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[7]
+      value: "It\u2019s been decades since I first joined and devoted myself to this
+        fanfare."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259892418635356694, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[8]
+      value: I even met my wife there.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259892418635356694, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[9]
+      value: Can you believe it?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259892418635356694, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: introSentences.Array.data[2]
+      value: What are you pride of the most?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259892418635356694, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: otherIntroSentences.Array.data[0]
+      value: What are you pride of the most?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259892418635356694, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: badChoiceSentences.Array.data[0]
+      value: 'Why would you be proud of this? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259892418635356694, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[10]
+      value: She is the first trumpet.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259892418635356694, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[11]
+      value: "She\u2019s so good, she slays all of her solo parts! "
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bc084bc4d176744429e32cf82dad8607, type: 3}
 --- !u!1 &1065438478
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,7 +1922,7 @@ Transform:
   - {fileID: 459860209}
   - {fileID: 221125805}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: 0}
 --- !u!1 &1067747455
 GameObject:
@@ -1209,8 +2174,236 @@ Transform:
   m_LocalScale: {x: 3.690455, y: 0.69854003, z: 1.4251307}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: 0}
+--- !u!1001 &1167851699
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5104330428217376958, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: m_Name
+      value: CharacterBiquette
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104330428217376959, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.631016
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104330428217376959, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.26946634
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104330428217376959, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104330428217376959, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104330428217376959, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104330428217376959, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104330428217376959, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104330428217376959, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104330428217376959, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104330428217376959, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104330428217376959, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: choices.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: introSentences.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: otherIntroSentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: badChoiceSentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[0]
+      value: My first girlfriend was a wild sheep.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[1]
+      value: Like many wild sheeps of her age, she smelt bad, and her fur was always
+        a mess.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[2]
+      value: These are the very first things I would notice when she would pick me
+        up in her brand new car.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[3]
+      value: ' I would get in, kiss her and smell cigarettes and booze in her breath.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[4]
+      value: Then, I would gently touch her coarse fur. With her, I felt powerful
+        and limitless.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[5]
+      value: This memory got buried with her a long time ago, after she died.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[6]
+      value: But a dream brought her back.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[7]
+      value: In this dream, I hear someone knocking on my door in the middle of the
+        night.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[8]
+      value: I get up and I walk to the door.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[9]
+      value: I open it, it is pitch black.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[10]
+      value: "I can\u2019t see, but I smell."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[11]
+      value: Cigarettes and booze.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[12]
+      value: ' I stretch my arm out the door frame, and I feel.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: rightChoiceSentences.Array.data[13]
+      value: 'A rough, coarse fur. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: choices.Array.data[0]
+      value: Driving in the night
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: choices.Array.data[1]
+      value: The coffin that took too much space
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: choices.Array.data[2]
+      value: Aunt Elina telling a story
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: introSentences.Array.data[0]
+      value: Hello Dear!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: introSentences.Array.data[1]
+      value: Nothing feels better than travelling in a train with few passengers.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: introSentences.Array.data[2]
+      value: 'I feel a strong connection with them. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: introSentences.Array.data[3]
+      value: Even with the dead one.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: introSentences.Array.data[4]
+      value: 'Do you remember meeting a ghost? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: otherIntroSentences.Array.data[0]
+      value: 'Do you remember meeting a ghost? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: introSentences.Array.data[5]
+      value: Because I do.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: otherIntroSentences.Array.data[1]
+      value: Because I do.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: badChoiceSentences.Array.data[0]
+      value: There is no ghost in this story...
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d44317d5feee2c34f95772cec3e939ff, type: 3}
 --- !u!1 &1173958034 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100010, guid: 67da1b6409599e04dbfca48c0aeb442b,
@@ -1290,7 +2483,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7601078817930909, guid: dc858f3fe5cd4a740b800189dc322312, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7601078817930909, guid: dc858f3fe5cd4a740b800189dc322312, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1394,7 +2587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 67da1b6409599e04dbfca48c0aeb442b, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 67da1b6409599e04dbfca48c0aeb442b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1643,75 +2836,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1001 &1821282345
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8429376359104108550, guid: aa56e4b9e495a0846a12b002c2623a8d,
-        type: 3}
-      propertyPath: m_Name
-      value: CharacterFish
-      objectReference: {fileID: 0}
-    - target: {fileID: 8429376359104108551, guid: aa56e4b9e495a0846a12b002c2623a8d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.727
-      objectReference: {fileID: 0}
-    - target: {fileID: 8429376359104108551, guid: aa56e4b9e495a0846a12b002c2623a8d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.31
-      objectReference: {fileID: 0}
-    - target: {fileID: 8429376359104108551, guid: aa56e4b9e495a0846a12b002c2623a8d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 30.936
-      objectReference: {fileID: 0}
-    - target: {fileID: 8429376359104108551, guid: aa56e4b9e495a0846a12b002c2623a8d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8429376359104108551, guid: aa56e4b9e495a0846a12b002c2623a8d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.9624606
-      objectReference: {fileID: 0}
-    - target: {fileID: 8429376359104108551, guid: aa56e4b9e495a0846a12b002c2623a8d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8429376359104108551, guid: aa56e4b9e495a0846a12b002c2623a8d,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.27142164
-      objectReference: {fileID: 0}
-    - target: {fileID: 8429376359104108551, guid: aa56e4b9e495a0846a12b002c2623a8d,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8429376359104108551, guid: aa56e4b9e495a0846a12b002c2623a8d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8429376359104108551, guid: aa56e4b9e495a0846a12b002c2623a8d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -211.49799
-      objectReference: {fileID: 0}
-    - target: {fileID: 8429376359104108551, guid: aa56e4b9e495a0846a12b002c2623a8d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
 --- !u!1 &1902207133
 GameObject:
   m_ObjectHideFlags: 0
@@ -1801,7 +2925,7 @@ Transform:
   m_LocalScale: {x: 1.9569443, y: 0.121560805, z: 0.6952}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: 0}
 --- !u!1 &1910600794
 GameObject:
@@ -1940,7 +3064,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 67da1b6409599e04dbfca48c0aeb442b, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 67da1b6409599e04dbfca48c0aeb442b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2025,6 +3149,105 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1001 &2025072186
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6759770599166900841, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: m_Name
+      value: CharacterFishEnd
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759770599166900840, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759770599166900840, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759770599166900840, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759770599166900840, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759770599166900840, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759770599166900840, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759770599166900840, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759770599166900840, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759770599166900840, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759770599166900840, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 133.50601
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759770599166900840, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969930286553094544, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: introSentences.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969930286553094544, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: introSentences.Array.data[0]
+      value: "Have you the memories? \t"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969930286553094544, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: introSentences.Array.data[1]
+      value: Was is hard? Passengers tend to be talkative in my train.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969930286553094544, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: otherIntroSentences.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969930286553094544, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: introSentences.Array.data[2]
+      value: Anyway...
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969930286553094544, guid: d43c27fc747a76e42a7dc1368793c46a,
+        type: 3}
+      propertyPath: introSentences.Array.data[3]
+      value: Let's here your memories.
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d43c27fc747a76e42a7dc1368793c46a, type: 3}
 --- !u!1 &2098001306 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100014, guid: 67da1b6409599e04dbfca48c0aeb442b,
@@ -2152,7 +3375,7 @@ Transform:
   m_LocalScale: {x: 3.690455, y: 0.69854003, z: 1.4251307}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: 0}
 --- !u!1 &2135439586 stripped
 GameObject:
@@ -2501,7 +3724,7 @@ PrefabInstance:
     - target: {fileID: 6411344932797293060, guid: ad5267a1e0577124a8a9cb8c702710da,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6411344932797293060, guid: ad5267a1e0577124a8a9cb8c702710da,
         type: 3}

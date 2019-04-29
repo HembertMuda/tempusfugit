@@ -157,5 +157,163 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2435ab6167bc33445bd3f2a2f0501b77, type: 2}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: introSentences.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: otherIntroSentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: choices.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.size
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: badChoiceSentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoice
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: camFramingPoint
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: introSentences.Array.data[0]
+      value: "\u201CI long for scenes where man hath never trod"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: introSentences.Array.data[1]
+      value: A place where woman never smiled or wept,
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: introSentences.Array.data[2]
+      value: There to abide and sleep as I in childhood sweetly slept
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: introSentences.Array.data[3]
+      value: Untroubling and untroubled where I lie
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: introSentences.Array.data[4]
+      value: ' the grass below - '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: introSentences.Array.data[5]
+      value: "above the vaulted sky\u2026\u201D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: introSentences.Array.data[6]
+      value: ' -John Clare'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: introSentences.Array.data[7]
+      value: Tell me the saddest thing you have witnessed, stranger.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: otherIntroSentences.Array.data[0]
+      value: Tell me the saddest thing you have witnessed, stranger.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: choices.Array.data[0]
+      value: Driving in the night
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: choices.Array.data[1]
+      value: The coffin that took too much space
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: choices.Array.data[2]
+      value: Aunt Elina telling a story
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[0]
+      value: I am sorry for your loss.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[1]
+      value: I, too, lost something dear to me.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[2]
+      value: "I\u2019m obsessed with the memory of my hometown."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[3]
+      value: An ancient, elegant town. High buildings, faded red facades.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[4]
+      value: The luxurious vegetation that gave the city its eerie charm.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[5]
+      value: Ivy climbing along the old stone walls and the houses.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[6]
+      value: Rose shrubs growing around the wells of the city.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[7]
+      value: Wistaria providing cover from the sun in the inner courtyards.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[8]
+      value: (they look in the distance)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[9]
+      value: My last day in my hometown was a holiday.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[10]
+      value: The sky was blue, the air was sweet and warm.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[11]
+      value: The streets were filled by flocks of people with colorful dresses and
+        happy faces.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[12]
+      value: "They all had bouquets in their arms and flowers in their hair. \r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[13]
+      value: 'Then the explosion. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[14]
+      value: the waves of water filling the streets
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[15]
+      value: the screams.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[16]
+      value: These are the last things I remember from my hometown.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[17]
+      value: Since this day, I wander and travel to find a city that looks like my
+        dear vanished hometown.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[18]
+      value: "To finally be at peace somewhere in this world.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: badChoiceSentences.Array.data[0]
+      value: Maybe I am getting insensitive as I am older, but I felt nothing...
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}

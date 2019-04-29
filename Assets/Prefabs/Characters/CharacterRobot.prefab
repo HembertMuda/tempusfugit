@@ -147,5 +147,159 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ec62274c06d512d43bc90c7a570809da, type: 2}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: introSentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: otherIntroSentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: choices.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.size
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: badChoiceSentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoice
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: camFramingPoint
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: introSentences.Array.data[0]
+      value: I am going to the sea.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: introSentences.Array.data[1]
+      value: "I haven\u2019t gone there for a long time."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: introSentences.Array.data[2]
+      value: What is the oldest memory you have from your childhood?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: otherIntroSentences.Array.data[0]
+      value: What is the oldest memory you have from your childhood?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: choices.Array.data[0]
+      value: Driving in the night
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: choices.Array.data[1]
+      value: The coffin that took too much space
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: choices.Array.data[2]
+      value: Aunt Elina telling a story
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[0]
+      value: 'Rare are the people able to leave such a mark. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[1]
+      value: "Mom got married with a sailor. At the time, it wasn\u2019t a good idea. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[2]
+      value: A robot, with a sailor!?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[3]
+      value: ' People would give us dirty looks in the streets.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[4]
+      value: "Tim didn\u2019t have kids."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[5]
+      value: "He was sad about it \u2018cause he wanted to teach how to be a good
+        sailor. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[6]
+      value: "That\u2019s how I learned about knots, tides, winds, everything!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[7]
+      value: But Mom would never let him take me on his one mast boat, a sloop.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[8]
+      value: She was scared.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[9]
+      value: "I don\u2019t blame her.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[10]
+      value: 'One day, Mom had to run errands outside the village. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[11]
+      value: Tim took this as a chance.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[12]
+      value: Together, we sailed for three hours.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[13]
+      value: I remember every second of it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[14]
+      value: 'For me, it felt like going on Andromeda. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[15]
+      value: 'We could go everywhere, nobody could stop us. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[16]
+      value: "I watched as far as my eyes could see. \r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[17]
+      value: We moored before Mom came back.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[18]
+      value: "Tim and I never talked about it again. We didn\u2019t have to."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[19]
+      value: 'I have never sailed again. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[20]
+      value: 'Tim died a few weeks ago. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[21]
+      value: 'He left me his sloop. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: rightChoiceSentences.Array.data[22]
+      value: "And today, I am going to the sea. \r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092317518429183, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
+      propertyPath: badChoiceSentences.Array.data[0]
+      value: I appreciate you told this story. But is it about someone who left a
+        mark?
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa56e4b9e495a0846a12b002c2623a8d, type: 3}
