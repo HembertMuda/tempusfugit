@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Sirenix.OdinInspector;
+using System.Collections.Generic;
 using UnityEngine;
-using Sirenix.OdinInspector;
 
 public class TalkableCharacter : MonoBehaviour
 {
@@ -84,6 +84,22 @@ public class TalkableCharacter : MonoBehaviour
         if (CurrentCharacterState == CharacterState.Walking)
         {
             CurrentCharacterState = CharacterState.Introducing;
+        }
+
+        InspectorEnd inspectorEnd = GetComponent<InspectorEnd>();
+        if (inspectorEnd != null)
+        {
+            choicesName.Clear();
+            if (uiManager.vignetteIconParent.childCount < 4)
+            {
+                choicesName.Add(inspectorEnd.notEnoughMemories);
+                currentChoices = new List<string>(choicesName);
+            }
+            else
+            {
+                choicesName.Add(inspectorEnd.enoughMemories);
+                currentChoices = new List<string>(choicesName);
+            }
         }
 
         if (CurrentCharacterState == CharacterState.Introducing)
