@@ -10164,9 +10164,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7748672577327172165, guid: dc858f3fe5cd4a740b800189dc322312,
         type: 3}
+      propertyPath: footstepClips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7748672577327172165, guid: dc858f3fe5cd4a740b800189dc322312,
+        type: 3}
       propertyPath: moveSpeed
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 7748672577327172165, guid: dc858f3fe5cd4a740b800189dc322312,
+        type: 3}
+      propertyPath: footstepClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 43419ef78fac7df47a3c3a4a87710db2, type: 3}
     - target: {fileID: 7601079341991014, guid: dc858f3fe5cd4a740b800189dc322312, type: 3}
       propertyPath: m_Radius
       value: 0.62
