@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
 {
     public enum GameState
     {
+        Menu,
         Walking,
         Talking,
         SayingMemory
@@ -17,7 +18,7 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
 
     public Action<GameState> onGameStateChanged;
 
-    public GameState CurrentGameState { get; set; } = GameState.Walking;
+    public GameState CurrentGameState { get; set; } = GameState.Menu;
 
     private Texture2D cursor;
 
@@ -46,8 +47,9 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     private void Start()
     {
         cursor = Resources.Load("LD_Icons_Curseur_Small") as Texture2D;
-        Cursor.SetCursor(null, Vector2.zero, CursorMode.ForceSoftware);
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.SetCursor(cursor, Vector2.zero, CursorMode.ForceSoftware);
+        //Cursor.SetCursor(null, Vector2.zero, CursorMode.ForceSoftware);
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()

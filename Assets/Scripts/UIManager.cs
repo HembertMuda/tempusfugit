@@ -43,6 +43,12 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private AudioClip[] writeSound = null;
 
+    [SerializeField]
+    private CanvasGroup menuCanvasGroup = null;
+
+    [SerializeField]
+    private CanvasGroup inGameCanvasGroup = null;
+
     public TalkableCharacter CurrentTalkableCharacter;
 
     private string currentSentence;
@@ -247,6 +253,27 @@ public class UIManager : MonoBehaviour
         RectTransform vignetteTransform = Instantiate(vignettePrefab, vignetteIconParent).GetComponent<RectTransform>();
         vignetteTransform.GetComponent<Image>().sprite = memorySprite;
         vignetteTransform.DOMove(memoriesIconParent.GetChild(vignetteIconParent.childCount - 1).GetComponent<RectTransform>().position, 1f).SetEase(Ease.OutCubic);
+    }
+
+    public void OnPlayButtonClick()
+    {
+        menuCanvasGroup.DOFade(0f, 1f).SetEase(Ease.OutCubic).OnComplete(() =>
+        {
+            inGameCanvasGroup.DOFade(1f, 1f).SetEase(Ease.OutCubic);
+            GameManager.Instance.ChangeState(GameManager.GameState.Walking);
+            menuCanvasGroup.interactable = false;
+        });
+
+    }
+
+    public void OnCreditsButtonClick()
+    {
+
+    }
+
+    public void OnQuitButtonClick()
+    {
+        Application.Quit();
     }
 
     private void Update()
