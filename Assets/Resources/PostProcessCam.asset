@@ -43,8 +43,8 @@ MonoBehaviour:
   ambientOcclusion:
     m_Enabled: 1
     m_Settings:
-      intensity: 1
-      radius: 0.3
+      intensity: 0.24
+      radius: 3.06
       sampleCount: 10
       downsampling: 1
       forceForwardCompatibility: 0
@@ -72,9 +72,9 @@ MonoBehaviour:
   depthOfField:
     m_Enabled: 0
     m_Settings:
-      focusDistance: 10
-      aperture: 5.6
-      focalLength: 50
+      focusDistance: 3.91
+      aperture: 8.5
+      focalLength: 25
       useCameraFov: 0
       kernelSize: 1
   motionBlur:
@@ -86,29 +86,29 @@ MonoBehaviour:
   eyeAdaptation:
     m_Enabled: 0
     m_Settings:
-      lowPercent: 45
-      highPercent: 95
+      lowPercent: 1
+      highPercent: 84.41018
       minLuminance: -5
-      maxLuminance: 1
+      maxLuminance: -4.98
       keyValue: 0.25
       dynamicKeyValue: 1
       adaptationType: 0
       speedUp: 2
       speedDown: 1
-      logMin: -8
-      logMax: 4
+      logMin: -13
+      logMax: 6
   bloom:
     m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 1.2
-        threshold: 0.73
-        softKnee: 0.263
-        radius: 1.96
+        intensity: 0.58
+        threshold: 1.17
+        softKnee: 0.687
+        radius: 7
         antiFlicker: 1
       lensDirt:
-        texture: {fileID: 0}
-        intensity: 3
+        texture: {fileID: 2800000, guid: 3884f7a2d04ffe8409ad9200b275896f, type: 3}
+        intensity: 1
   colorGrading:
     m_Enabled: 1
     m_Settings:
@@ -137,7 +137,7 @@ MonoBehaviour:
         log:
           slope: {r: 1, g: 1, b: 1, a: 0}
           power: {r: 1, g: 1, b: 1, a: 0}
-          offset: {r: 1, g: 1, b: 1, a: 0}
+          offset: {r: 1, g: 0.99559504, b: 0.9615267, a: 0.15483871}
         linear:
           lift: {r: 1, g: 1, b: 1, a: 0}
           gamma: {r: 1, g: 1, b: 1, a: 0}
@@ -308,7 +308,7 @@ MonoBehaviour:
   chromaticAberration:
     m_Enabled: 0
     m_Settings:
-      spectralTexture: {fileID: 0}
+      spectralTexture: {fileID: 2800000, guid: 50b54341495978843a6f85583ed4417d, type: 3}
       intensity: 0
   grain:
     m_Enabled: 1
@@ -318,17 +318,17 @@ MonoBehaviour:
       size: 0.31
       luminanceContribution: 1
   vignette:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       mode: 0
-      color: {r: 0, g: 0, b: 0, a: 1}
+      color: {r: 1, g: 0.43867922, b: 0.75566304, a: 1}
       center: {x: 0.5, y: 0.5}
-      intensity: 0.45
+      intensity: 0.325
       smoothness: 0.2
       roundness: 1
       mask: {fileID: 0}
       opacity: 1
-      rounded: 0
+      rounded: 1
   dithering:
     m_Enabled: 0
   monitors:
