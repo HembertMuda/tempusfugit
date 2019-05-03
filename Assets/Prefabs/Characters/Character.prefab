@@ -85,8 +85,13 @@ MonoBehaviour:
   badChoiceSentences: []
   memoryToGive: 
   memoryIcon: {fileID: 0}
-  saysomething: {fileID: 8300000, guid: 2b8ff7b39f08e9e4e894fb5df53fa2d1, type: 3}
-  asksomething: {fileID: 8300000, guid: 21e7096171cdc4648ae48a0c41632a3c, type: 3}
+  saysomething:
+  - {fileID: 8300000, guid: 2b8ff7b39f08e9e4e894fb5df53fa2d1, type: 3}
+  - {fileID: 8300000, guid: 0fcb620d8c0615840b18c14efb29919e, type: 3}
+  - {fileID: 8300000, guid: ab3b17ba4db04534a8a5c5ff79a10106, type: 3}
+  asksomething:
+  - {fileID: 8300000, guid: 21e7096171cdc4648ae48a0c41632a3c, type: 3}
+  currentChoices: []
   CurrentCharacterState: 0
 --- !u!82 &3414066579176796268
 AudioSource:
@@ -144,7 +149,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

@@ -13,7 +13,7 @@ public class TalkableCharacter : MonoBehaviour
     [SerializeField, TextArea]
     private List<string> otherIntroSentences = new List<string>();
 
-    [SerializeField, ValueDropdown("MemoriesName")  ]
+    [SerializeField, ValueDropdown("MemoriesName")]
     public List<string> choicesName = new List<string>();
 
     [SerializeField]
@@ -32,10 +32,10 @@ public class TalkableCharacter : MonoBehaviour
     public Sprite memoryIcon;
 
     [SerializeField, FoldoutGroup("Sounds")]
-    AudioClip saysomething;
+    AudioClip[] saysomething;
 
     [SerializeField, FoldoutGroup("Sounds")]
-    AudioClip asksomething;
+    AudioClip[] asksomething;
 
     private Transform playerTransform;
 
@@ -44,6 +44,8 @@ public class TalkableCharacter : MonoBehaviour
     private bool alreadyIntroduceOnce;
 
     private AudioSource audioSource;
+
+    public List<string> currentChoices = new List<string>();
 
     //[HideInInspector]
     //public bool alreadyGiveTheirMemory;
@@ -67,6 +69,7 @@ public class TalkableCharacter : MonoBehaviour
         playerTransform = FindObjectOfType<Player>().transform;
         uiManager = FindObjectOfType<UIManager>();
         audioSource = GetComponent<AudioSource>();
+        currentChoices = new List<string>(choicesName);
     }
 
     void Update()
@@ -91,16 +94,22 @@ public class TalkableCharacter : MonoBehaviour
                 {
                     uiManager.ChangeChatBoxText(otherIntroSentences[currentSentence]);
                     currentSentence++;
-                    if (!audioSource.isPlaying)
-                        audioSource.PlayOneShot(saysomething);
+                    if (!audioSource.isPlaying && saysomething != null && saysomething.Length > 0)
+                    {
+                        audioSource.Stop();
+                        audioSource.PlayOneShot(saysomething[Random.Range(0, saysomething.Length)]);
+                    }
                 }
                 else
                 {
                     CurrentCharacterState = CharacterState.Asking;
                     currentSentence = 0;
-                    if(!audioSource.isPlaying)
-                    audioSource.PlayOneShot(asksomething);
-                    uiManager.AskSomething(choicesName);
+                    if (asksomething != null && asksomething.Length > 0)
+                    {
+                        audioSource.Stop();
+                        audioSource.PlayOneShot(asksomething[Random.Range(0, asksomething.Length)]);
+                    }
+                    uiManager.AskSomething(currentChoices);
                 }
             }
             else
@@ -109,15 +118,23 @@ public class TalkableCharacter : MonoBehaviour
                 {
                     uiManager.ChangeChatBoxText(introSentences[currentSentence]);
                     currentSentence++;
-                    if (!audioSource.isPlaying)
-                        audioSource.PlayOneShot(saysomething);
+                    if (!audioSource.isPlaying && saysomething != null && saysomething.Length > 0)
+                    {
+                        audioSource.Stop();
+                        audioSource.PlayOneShot(saysomething[Random.Range(0, saysomething.Length)]);
+                    }
                 }
                 else
                 {
                     CurrentCharacterState = CharacterState.Asking;
+                    if (asksomething != null && asksomething.Length > 0)
+                    {
+                        audioSource.Stop();
+                        audioSource.PlayOneShot(asksomething[Random.Range(0, asksomething.Length)]);
+                    }
                     currentSentence = 0;
                     alreadyIntroduceOnce = true;
-                    uiManager.AskSomething(choicesName);
+                    uiManager.AskSomething(currentChoices);
                 }
             }
 
@@ -128,8 +145,11 @@ public class TalkableCharacter : MonoBehaviour
             {
                 uiManager.ChangeChatBoxText(rightChoiceSentences[currentSentence]);
                 currentSentence++;
-                if (!audioSource.isPlaying)
-                    audioSource.PlayOneShot(saysomething);
+                if (!audioSource.isPlaying && saysomething != null && saysomething.Length > 0)
+                {
+                    audioSource.Stop();
+                    audioSource.PlayOneShot(saysomething[Random.Range(0, saysomething.Length)]);
+                }
             }
             else
             {
@@ -152,7 +172,11 @@ public class TalkableCharacter : MonoBehaviour
             {
                 uiManager.ChangeChatBoxText(badChoiceSentences[currentSentence]);
                 currentSentence++;
-                audioSource.PlayOneShot(saysomething);
+                if (!audioSource.isPlaying && saysomething != null && saysomething.Length > 0)
+                {
+                    audioSource.Stop();
+                    audioSource.PlayOneShot(saysomething[Random.Range(0, saysomething.Length)]);
+                }
             }
             else
             {
@@ -166,13 +190,14 @@ public class TalkableCharacter : MonoBehaviour
     public void CheckRightChoice(int choice)
     {
         InspectorEnd inspectorEnd = GetComponent<InspectorEnd>();
-        if (inspectorEnd == null && choice == rightChoice || inspectorEnd != null && uiManager.vignetteIconParent.childCount >= 4)
+        Debug.Log(choicesName.IndexOf(currentChoices[choice]));
+        if (inspectorEnd == null && choicesName.IndexOf(currentChoices[choice]) == rightChoice || inspectorEnd != null && uiManager.vignetteIconParent.childCount >= 4)
         {
             uiManager.FadeWhite(true);
             CurrentCharacterState = CharacterState.Listening;
-            if(inspectorEnd == null)
+            if (inspectorEnd == null)
             {
-            uiManager.TellMemory(GameManager.Instance.GetMemoryByName(choicesName[choice]));
+                uiManager.TellMemory(GameManager.Instance.GetMemoryByName(currentChoices[choice]));
             }
             else
             {
@@ -185,7 +210,7 @@ public class TalkableCharacter : MonoBehaviour
             LetsTalk();
         }
 
-        choicesName.RemoveAt(choice);
+        currentChoices.RemoveAt(choice);
 
     }
 

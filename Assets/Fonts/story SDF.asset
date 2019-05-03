@@ -806,7 +806,20 @@ MonoBehaviour:
     xAdvance: 37.1875
     scale: 1
   m_kerningInfo:
-    kerningPairs: []
+    kerningPairs:
+    - m_FirstGlyph: 0
+      m_FirstGlyphAdjustments:
+        xPlacement: 0
+        yPlacement: 0
+        xAdvance: 0
+        yAdvance: 0
+      m_SecondGlyph: 0
+      m_SecondGlyphAdjustments:
+        xPlacement: 0
+        yPlacement: 0
+        xAdvance: 0
+        yAdvance: 0
+      xOffset: 0
   m_kerningPair:
     m_FirstGlyph: 0
     m_FirstGlyphAdjustments:
@@ -821,7 +834,8 @@ MonoBehaviour:
       xAdvance: 0
       yAdvance: 0
     xOffset: 0
-  fallbackFontAssets: []
+  fallbackFontAssets:
+  - {fileID: 0}
   m_CreationSettings:
     sourceFontFileName: 
     sourceFontFileGUID: 9a4bea445462e8b4ab6d7d5eec32bb5e

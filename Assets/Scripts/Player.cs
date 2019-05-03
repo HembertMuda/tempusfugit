@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
     public List<string> playerMemoriesNames = new List<string>();
 
     [SerializeField]
-    private List<AudioClip>footstepClips;
+    private List<AudioClip> footstepClips;
 
     private float moveHorizontal;
     private float moveVertical;
@@ -69,12 +69,12 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 moveDirection = new Vector3(moveHorizontal, 0, moveVertical);
-        if(moveDirection.magnitude > 0.8f)
+        if (moveDirection.magnitude > 0.8f)
         {
-            if(footstepCor == null)
+            if (footstepCor == null)
                 footstepCor = StartCoroutine(PlayFootstep());
         }
-        else 
+        else
         {
             if (footstepCor != null)
             {
@@ -93,6 +93,10 @@ public class Player : MonoBehaviour
             }
         }
 
+        if (moveDirection.magnitude <= 0.1f)
+        {
+            playerRigidbody.velocity = Vector3.zero;
+        }
     }
 
     private void Update()
@@ -171,7 +175,7 @@ public class Player : MonoBehaviour
 
     IEnumerator PlayFootstep()
     {
-        while(true)
+        while (true)
         {
             audioSource.PlayOneShot(footstepClips[Random.Range(0, footstepClips.Count)]);
             yield return new WaitForSeconds(0.5f);

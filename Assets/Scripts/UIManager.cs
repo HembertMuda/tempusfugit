@@ -40,6 +40,9 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private GameObject vignettePrefab = null;
 
+    [SerializeField]
+    private AudioClip[] writeSound = null;
+
     public TalkableCharacter CurrentTalkableCharacter;
 
     private string currentSentence;
@@ -49,7 +52,9 @@ public class UIManager : MonoBehaviour
     private int currentMemorySentenceindex;
 
     private Coroutine talkCoroutine;
-    
+
+    private AudioSource uiAudioSource;
+
     //private Coroutine memoryCoroutine; 
 
     void Start()
@@ -57,6 +62,7 @@ public class UIManager : MonoBehaviour
         Player player = FindObjectOfType<Player>();
         player.onInteractionLayerChanged += ChangeInteractionText;
         GameManager.Instance.onGameStateChanged += OnGamestateChanged;
+        uiAudioSource = GetComponent<AudioSource>();
     }
 
     void ChangeInteractionText(int interactionLayer)
@@ -64,10 +70,10 @@ public class UIManager : MonoBehaviour
         switch (interactionLayer)
         {
             case 9:
-                interactionText.text = "Open / Close";
+                interactionText.text = "<sprite index=1> Interact";
                 break;
             case 10:
-                interactionText.text = "Talk";
+                interactionText.text = "<sprite index=0> Talk";
                 break;
             default:
                 interactionText.text = string.Empty;
@@ -103,6 +109,10 @@ public class UIManager : MonoBehaviour
         while (chatBoxText.text != sentence)
         {
             charCount++;
+            if (!uiAudioSource.isPlaying)
+            {
+                uiAudioSource.PlayOneShot(writeSound[Random.Range(0, writeSound.Length)]);
+            }
             chatBoxText.text = sentence.Substring(0, charCount);
             yield return new WaitForSeconds(0.05f);
         }
@@ -132,12 +142,12 @@ public class UIManager : MonoBehaviour
             LetsTalkMemory();
             //tellMemoryText.text = currentMemorySentence;
         }
-        else 
+        else
         {
             if (CurrentTalkableCharacter.GetComponent<InspectorEnd>() == null)
             {
                 FadeWhite(false);
-            CurrentTalkableCharacter.LetsTalk();
+                CurrentTalkableCharacter.LetsTalk();
             }
             else
             {
@@ -155,7 +165,7 @@ public class UIManager : MonoBehaviour
             if (i < choices.Count)
             {
                 choicesText[i].transform.parent.gameObject.SetActive(true);
-                if(CurrentTalkableCharacter.GetComponent<InspectorEnd>() == null)
+                if (CurrentTalkableCharacter.GetComponent<InspectorEnd>() == null)
                 {
                     choicesText[i].text = GameManager.Instance.GetMemoryByName(choices[i]).ChoiceText;
                 }
@@ -183,9 +193,9 @@ public class UIManager : MonoBehaviour
 
     public void FadeWhite(bool toWhite)
     {
-        tellMemoryCanvas.DOFade(toWhite ? 1f : 0f, whiteFadeDuration).SetEase(Ease.OutCubic).OnComplete(() => 
+        tellMemoryCanvas.DOFade(toWhite ? 1f : 0f, whiteFadeDuration).SetEase(Ease.OutCubic).OnComplete(() =>
             {
-                if(!toWhite)
+                if (!toWhite)
                 {
                     CurrentTalkableCharacter.CurrentCharacterState = TalkableCharacter.CharacterState.Succeed;
                     CurrentTalkableCharacter.LetsTalk();
@@ -241,9 +251,9 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0) && GameManager.Instance.CurrentGameState == GameManager.GameState.Talking && CurrentTalkableCharacter != null)
+        if (Input.GetMouseButtonDown(0) && GameManager.Instance.CurrentGameState == GameManager.GameState.Talking && CurrentTalkableCharacter != null)
         {
-            if(CurrentTalkableCharacter.CurrentCharacterState == TalkableCharacter.CharacterState.Listening)
+            if (CurrentTalkableCharacter.CurrentCharacterState == TalkableCharacter.CharacterState.Listening)
             {
                 OnMemoryNextButtonClicked();
             }
