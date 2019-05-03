@@ -262,6 +262,7 @@ public class UIManager : MonoBehaviour
             inGameCanvasGroup.DOFade(1f, 1f).SetEase(Ease.OutCubic);
             GameManager.Instance.ChangeState(GameManager.GameState.Walking);
             menuCanvasGroup.interactable = false;
+            menuCanvasGroup.blocksRaycasts = false;
         });
 
     }
