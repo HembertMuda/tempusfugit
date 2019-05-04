@@ -118,14 +118,23 @@ public class TalkableCharacter : MonoBehaviour
                 }
                 else
                 {
-                    CurrentCharacterState = CharacterState.Asking;
-                    currentSentence = 0;
-                    if (asksomething != null && asksomething.Length > 0)
+                    if (choicesName.Count > 0)
                     {
-                        audioSource.Stop();
-                        audioSource.PlayOneShot(asksomething[Random.Range(0, asksomething.Length)]);
+                        CurrentCharacterState = CharacterState.Asking;
+                        currentSentence = 0;
+                        if (asksomething != null && asksomething.Length > 0)
+                        {
+                            audioSource.Stop();
+                            audioSource.PlayOneShot(asksomething[Random.Range(0, asksomething.Length)]);
+                        }
+                        uiManager.AskSomething(currentChoices);
                     }
-                    uiManager.AskSomething(currentChoices);
+                    else
+                    {
+                        currentSentence = 0;
+                        CurrentCharacterState = CharacterState.Walking;
+                        GameManager.Instance.ChangeState(GameManager.GameState.Walking);
+                    }
                 }
             }
             else
@@ -142,15 +151,26 @@ public class TalkableCharacter : MonoBehaviour
                 }
                 else
                 {
-                    CurrentCharacterState = CharacterState.Asking;
-                    if (asksomething != null && asksomething.Length > 0)
+
+                    if (choicesName.Count > 0)
                     {
-                        audioSource.Stop();
-                        audioSource.PlayOneShot(asksomething[Random.Range(0, asksomething.Length)]);
+                        CurrentCharacterState = CharacterState.Asking;
+                        if (asksomething != null && asksomething.Length > 0)
+                        {
+                            audioSource.Stop();
+                            audioSource.PlayOneShot(asksomething[Random.Range(0, asksomething.Length)]);
+                        }
+                        currentSentence = 0;
+                        alreadyIntroduceOnce = true;
+                        uiManager.AskSomething(currentChoices);
                     }
-                    currentSentence = 0;
-                    alreadyIntroduceOnce = true;
-                    uiManager.AskSomething(currentChoices);
+                    else
+                    {
+                        currentSentence = 0;
+                        alreadyIntroduceOnce = true;
+                        CurrentCharacterState = CharacterState.Walking;
+                        GameManager.Instance.ChangeState(GameManager.GameState.Walking);
+                    }
                 }
             }
 
@@ -206,7 +226,7 @@ public class TalkableCharacter : MonoBehaviour
     public void CheckRightChoice(int choice)
     {
         InspectorEnd inspectorEnd = GetComponent<InspectorEnd>();
-        Debug.Log(choicesName.IndexOf(currentChoices[choice]));
+
         if (inspectorEnd == null && choicesName.IndexOf(currentChoices[choice]) == rightChoice || inspectorEnd != null && uiManager.vignetteIconParent.childCount >= 4)
         {
             uiManager.FadeWhite(true);

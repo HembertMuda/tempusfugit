@@ -56,6 +56,8 @@ public class Player : MonoBehaviour
 
     private Coroutine footstepCor;
 
+    private UIManager uIManager;
+
     public Action<int> onInteractionLayerChanged;
 
     private void Start()
@@ -64,6 +66,7 @@ public class Player : MonoBehaviour
         camLocalPosInit = camTransform.localPosition;
         GameManager.Instance.onGameStateChanged += OnGameStateChanged;
         audioSource = GetComponent<AudioSource>();
+        uIManager = FindObjectOfType<UIManager>();
     }
 
     private void FixedUpdate()
@@ -157,14 +160,19 @@ public class Player : MonoBehaviour
                 TalkableCharacter talkableCharacter = raycastHitInteraction.collider.GetComponentInParent<TalkableCharacter>();
                 if (talkableCharacter != null)
                 {
-                    GameManager.Instance.ChangeState(GameManager.GameState.Talking);
-                    AdaptCamToTalkableCharacter(talkableCharacter);
-                    FindObjectOfType<UIManager>().CurrentTalkableCharacter = talkableCharacter;
-                    talkableCharacter.LetsTalk();
-                    playerRigidbody.velocity = Vector3.zero;
+                    TalkToCharacter(talkableCharacter);
                 }
             }
         }
+    }
+
+    public void TalkToCharacter(TalkableCharacter characterToTalk)
+    {
+        GameManager.Instance.ChangeState(GameManager.GameState.Talking);
+        AdaptCamToTalkableCharacter(characterToTalk);
+        uIManager.CurrentTalkableCharacter = characterToTalk;
+        characterToTalk.LetsTalk();
+        playerRigidbody.velocity = Vector3.zero;
     }
 
     public void AdaptCamToTalkableCharacter(TalkableCharacter talkableCharacter)
@@ -188,6 +196,16 @@ public class Player : MonoBehaviour
         {
             camTransform.localPosition = camLocalPosInit;
             camTransform.localEulerAngles = Vector3.zero;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        TriggerForceTalk triggerForceTalk = other.GetComponentInParent<TriggerForceTalk>();
+        if (triggerForceTalk != null)
+        {
+            TalkToCharacter(triggerForceTalk.forceTalkableCharacter);
+            triggerForceTalk.Disable();
         }
     }
 }

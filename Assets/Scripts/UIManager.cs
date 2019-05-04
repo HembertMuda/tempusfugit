@@ -61,8 +61,6 @@ public class UIManager : MonoBehaviour
 
     private AudioSource uiAudioSource;
 
-    //private Coroutine memoryCoroutine; 
-
     void Start()
     {
         Player player = FindObjectOfType<Player>();
