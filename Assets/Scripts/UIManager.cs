@@ -17,6 +17,9 @@ public class UIManager : MonoBehaviour
     private CanvasGroup dialogueBoxCanvasGroup = null;
 
     [SerializeField]
+    private CanvasGroup memoriesCanvasGroup = null;
+
+    [SerializeField]
     private TextMeshProUGUI chatBoxText = null;
 
     [SerializeField]
@@ -48,6 +51,12 @@ public class UIManager : MonoBehaviour
 
     [SerializeField]
     private CanvasGroup inGameCanvasGroup = null;
+
+    [SerializeField]
+    private AudioClip fadeInSound = null;
+
+    [SerializeField]
+    private AudioClip fadeOutSound = null;
 
     public TalkableCharacter CurrentTalkableCharacter;
 
@@ -92,11 +101,13 @@ public class UIManager : MonoBehaviour
             ChangeInteractionText(0);
             dialogueBoxCanvasGroup.DOFade(1f, 0.5f).SetEase(Ease.OutCubic);
             lockedCursor.enabled = false;
+            memoriesCanvasGroup.DOFade(0f, 1f).SetEase(Ease.OutCubic);
         }
         else if (newGameState == GameManager.GameState.Walking)
         {
             dialogueBoxCanvasGroup.DOFade(0f, 0.5f).SetEase(Ease.OutCubic);
             lockedCursor.enabled = true;
+            memoriesCanvasGroup.DOFade(1f, 1f).SetEase(Ease.OutCubic);
         }
     }
 
@@ -205,6 +216,17 @@ public class UIManager : MonoBehaviour
                     CurrentTalkableCharacter.LetsTalk();
                 }
             });
+
+        dialogueBoxCanvasGroup.DOFade(toWhite ? 0f : 1f, 0.5f).SetEase(Ease.OutCubic);
+
+        AudioClip clip = toWhite ? fadeInSound : fadeOutSound;
+
+        if (clip != null)
+        {
+            uiAudioSource.Stop();
+            uiAudioSource.PlayOneShot(clip);
+        }
+
         tellMemoryCanvas.interactable = toWhite;
     }
 

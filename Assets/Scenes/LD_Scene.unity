@@ -839,6 +839,16 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 479601742232698373, guid: edbf54d837606f6479d0c425021c35c9,
+        type: 3}
+      propertyPath: fadeInSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 43419ef78fac7df47a3c3a4a87710db2, type: 3}
+    - target: {fileID: 479601742232698373, guid: edbf54d837606f6479d0c425021c35c9,
+        type: 3}
+      propertyPath: fadeOutSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 1978e0dbe6d8ab3469cab95a15db5b98, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edbf54d837606f6479d0c425021c35c9, type: 3}
 --- !u!4 &45472138 stripped
