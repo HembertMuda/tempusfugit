@@ -32,10 +32,10 @@ public class TalkableCharacter : MonoBehaviour
     public Sprite memoryIcon;
 
     [SerializeField, FoldoutGroup("Sounds")]
-    AudioClip[] saysomething;
+    AudioClip[] saysomething = null;
 
     [SerializeField, FoldoutGroup("Sounds")]
-    AudioClip[] asksomething;
+    AudioClip[] asksomething = null;
 
     private Transform playerTransform;
 

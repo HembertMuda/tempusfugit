@@ -20,6 +20,9 @@ public class UIManager : MonoBehaviour
     private CanvasGroup memoriesCanvasGroup = null;
 
     [SerializeField]
+    private CanvasGroup tutoCanvasGroup = null;
+
+    [SerializeField]
     private TextMeshProUGUI chatBoxText = null;
 
     [SerializeField]
@@ -166,7 +169,7 @@ public class UIManager : MonoBehaviour
             }
             else
             {
-                UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+                GameManager.Instance.Restart();
             }
         }
     }
@@ -285,6 +288,7 @@ public class UIManager : MonoBehaviour
             menuCanvasGroup.blocksRaycasts = false;
         });
 
+        SoundManager.Instance.FadeMusic(true);
     }
 
     public void OnCreditsButtonClick()
@@ -295,6 +299,12 @@ public class UIManager : MonoBehaviour
     public void OnQuitButtonClick()
     {
         Application.Quit();
+    }
+
+    public void HideTuto()
+    {
+        if (tutoCanvasGroup.alpha == 1f)
+            tutoCanvasGroup.DOFade(0f, 1f).SetEase(Ease.OutCubic);
     }
 
     private void Update()

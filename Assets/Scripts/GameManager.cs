@@ -38,6 +38,12 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
         }
     }
 
+    public void Restart()
+    {
+        SoundManager.Instance.FadeMusic(false);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+    }
+
     protected override void Awake()
     {
         DestroyOnLoad = true;
@@ -48,6 +54,7 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     {
         cursor = Resources.Load("LD_Icons_Curseur_Small") as Texture2D;
         Cursor.SetCursor(cursor, Vector2.zero, CursorMode.ForceSoftware);
+        SoundManager.Instance.FadeMusic(false);
         //Cursor.SetCursor(null, Vector2.zero, CursorMode.ForceSoftware);
         //Cursor.lockState = CursorLockMode.Locked;
     }

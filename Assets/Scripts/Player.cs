@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
     public List<string> playerMemoriesNames = new List<string>();
 
     [SerializeField]
-    private List<AudioClip> footstepClips;
+    private List<AudioClip> footstepClips = new List<AudioClip>();
 
     private float moveHorizontal;
     private float moveVertical;
@@ -85,6 +85,7 @@ public class Player : MonoBehaviour
                 footstepCor = null;
             }
         }
+
         if (GameManager.Instance.CurrentGameState == GameManager.GameState.Walking)
         {
             if (moveDirection.magnitude > 0.1f)
@@ -151,6 +152,8 @@ public class Player : MonoBehaviour
                 Door doorRaycast = raycastHitInteraction.collider.GetComponent<Door>();
                 if (doorRaycast != null)
                 {
+                    uIManager.HideTuto();
+
                     if (!doorRaycast.isOpened)
                         doorRaycast.Open();
                     else
@@ -173,6 +176,8 @@ public class Player : MonoBehaviour
         uIManager.CurrentTalkableCharacter = characterToTalk;
         characterToTalk.LetsTalk();
         playerRigidbody.velocity = Vector3.zero;
+        moveHorizontal = 0f;
+        moveVertical = 0f;
     }
 
     public void AdaptCamToTalkableCharacter(TalkableCharacter talkableCharacter)
