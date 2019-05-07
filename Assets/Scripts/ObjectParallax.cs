@@ -25,6 +25,6 @@ public class ObjectParallax : MonoBehaviour
 
     public void InitObject()
     {
-        transform.position = new Vector3(Random.Range(movingObjects.rangeXToSpawn.x, movingObjects.rangeXToSpawn.y) * (Random.Range(0, 2) == 0 ? 1f : -1f), 0f, Random.Range(movingObjects.rangeXToSpawn.x, movingObjects.rangeXToSpawn.y));
+        transform.position = new Vector3(Random.Range(movingObjects.rangeXToSpawn.x, movingObjects.rangeXToSpawn.y) * (Random.Range(0, 2) == 0 ? 1f : -1f), 0f, Random.Range(movingObjects.rangeZToSpawn.x, movingObjects.rangeZToSpawn.y));
     }
 }

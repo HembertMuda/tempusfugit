@@ -25,6 +25,16 @@ public class SoundManager : MonoBehaviourSingleton<SoundManager>
         sdAudioSource = GetComponent<AudioSource>();
     }
 
+    public void StopMusic()
+    {
+        if (musicTween != null)
+        {
+            musicTween.Kill();
+        }
+
+        musicTween = sdAudioSource.DOFade(0f, 3f).SetEase(Ease.OutCubic);
+    }
+
     public void FadeMusic(bool ambiant)
     {
         if (ambiant && sdAudioSource.clip == ambiantClip || !ambiant && sdAudioSource.clip == musicClip)

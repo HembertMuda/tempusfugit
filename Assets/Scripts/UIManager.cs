@@ -288,7 +288,7 @@ public class UIManager : MonoBehaviour
             menuCanvasGroup.blocksRaycasts = false;
         });
 
-        SoundManager.Instance.FadeMusic(true);
+        SoundManager.Instance.StopMusic();
     }
 
     public void OnCreditsButtonClick()

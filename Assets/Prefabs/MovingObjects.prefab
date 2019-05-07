@@ -45,8 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsToInstantiate:
   - {fileID: 5333362443402512293, guid: 0d8140222f5c77541aa128496d4f101c, type: 3}
-  - {fileID: 5333362443402512293, guid: 4b612f2a98d8062439babc5e16d3e133, type: 3}
-  - {fileID: 5333362443402512293, guid: bbc8c050efe13b848a1d0d8bea7c658c, type: 3}
+  - {fileID: 5333362443402512293, guid: 694094af5629bd04cb0fc17fe693e2f1, type: 3}
+  - {fileID: 5333362443402512293, guid: 5475bbd5bcbfd624e957cc83a12fc524, type: 3}
   rangeXToSpawn: {x: 4, y: 150}
   rangeZToSpawn: {x: 200, y: 500}
   randomNumberObjectToSpawn: {x: 5, y: 20}

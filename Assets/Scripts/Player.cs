@@ -212,5 +212,11 @@ public class Player : MonoBehaviour
             TalkToCharacter(triggerForceTalk.forceTalkableCharacter);
             triggerForceTalk.Disable();
         }
+
+        StartMusicTrigger startMusicTrigger = other.GetComponentInParent<StartMusicTrigger>();
+        if (startMusicTrigger != null)
+        {
+            startMusicTrigger.StartMusic();
+        }
     }
 }

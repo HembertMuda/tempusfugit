@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
         {
             CurrentGameState = newGameState;
             Cursor.lockState = CurrentGameState == GameState.Talking ? CursorLockMode.None : CursorLockMode.Locked;
+            Cursor.visible = CurrentGameState == GameState.Talking;
             Cursor.SetCursor(CurrentGameState == GameState.Talking ? cursor : null, Vector2.zero, CursorMode.ForceSoftware);
 
             if (onGameStateChanged != null)
