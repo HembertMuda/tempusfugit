@@ -107,7 +107,7 @@ Transform:
   m_GameObject: {fileID: 7575557644883993627}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 17.68, y: 0.19360971, z: 14.871701}
-  m_LocalScale: {x: 1.1355464, y: 1.4590107, z: 1.0299741}
+  m_LocalScale: {x: 1.2756728, y: 1.4590107, z: 1.0299741}
   m_Children:
   - {fileID: 7575557644883703865}
   m_Father: {fileID: 0}
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 2093517492}
-  openClip: {fileID: 8300000, guid: 8b5fa99f4e3d74441877d88c6febb721, type: 3}
+  openClip: {fileID: 8300000, guid: 9b2d2f9c98743644db7f97fd6d49f677, type: 3}
   closeClip: {fileID: 8300000, guid: 44d97015ec733334fb8eb3c2fa85d70f, type: 3}
   isOpened: 0
 --- !u!65 &2486716876585371760

@@ -1,0 +1,128 @@
+fileFormatVersion: 2
+guid: 6c6440a753a9ede48856251eab70d6f5
+timeCreated: 1487685357
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: BezierCircle
+    100002: Camera
+    100004: Cube
+    100006: Lamp
+    100008: //RootNode
+    100010: tiroir
+    100012: tiroir.001
+    100014: tiroir.002
+    100016: tiroir.003
+    100018: porte
+    100020: "\xE9tag\xE8re"
+    400000: BezierCircle
+    400002: Camera
+    400004: Cube
+    400006: Lamp
+    400008: //RootNode
+    400010: tiroir
+    400012: tiroir.001
+    400014: tiroir.002
+    400016: tiroir.003
+    400018: porte
+    400020: "\xE9tag\xE8re"
+    2300000: BezierCircle
+    2300002: Cube
+    2300004: tiroir
+    2300006: tiroir.001
+    2300008: tiroir.002
+    2300010: tiroir.003
+    2300012: porte
+    2300014: "\xE9tag\xE8re"
+    3300000: BezierCircle
+    3300002: Cube
+    3300004: tiroir
+    3300006: tiroir.001
+    3300008: tiroir.002
+    3300010: tiroir.003
+    3300012: porte
+    3300014: "\xE9tag\xE8re"
+    4300000: BezierCircle
+    4300002: Cube
+    4300004: tiroir.003
+    4300006: tiroir.002
+    4300008: tiroir.001
+    4300010: tiroir
+    4300012: porte
+    4300014: "\xE9tag\xE8re"
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

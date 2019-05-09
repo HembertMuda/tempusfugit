@@ -1,0 +1,175 @@
+fileFormatVersion: 2
+guid: 5705be613aec59a4ebc6b0ec78ff3e6a
+timeCreated: 1513447405
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Camera
+    100002: Cube
+    100004: Lamp
+    100006: //RootNode
+    100008: Cube.001
+    100010: Cube.002
+    100012: Cube.003
+    100014: "fen\xEAtre"
+    100016: "fen\xEAtre.001"
+    100018: "fen\xEAtre.002"
+    100020: "fen\xEAtre.003"
+    100022: "fen\xEAtre.004"
+    100024: "fen\xEAtre.005"
+    100026: Maison_1
+    100028: Maison_1.001
+    100030: Maison_1.002
+    100032: Porte
+    100034: Porte.001
+    100036: Porte.002
+    100038: routeTrottoir
+    400000: Camera
+    400002: Cube
+    400004: Lamp
+    400006: //RootNode
+    400008: Cube.001
+    400010: Cube.002
+    400012: Cube.003
+    400014: "fen\xEAtre"
+    400016: "fen\xEAtre.001"
+    400018: "fen\xEAtre.002"
+    400020: "fen\xEAtre.003"
+    400022: "fen\xEAtre.004"
+    400024: "fen\xEAtre.005"
+    400026: Maison_1
+    400028: Maison_1.001
+    400030: Maison_1.002
+    400032: Porte
+    400034: Porte.001
+    400036: Porte.002
+    400038: routeTrottoir
+    2000000: Camera
+    2300000: Cube
+    2300002: Cube.001
+    2300004: Cube.002
+    2300006: Cube.003
+    2300008: "fen\xEAtre"
+    2300010: "fen\xEAtre.001"
+    2300012: "fen\xEAtre.002"
+    2300014: "fen\xEAtre.003"
+    2300016: "fen\xEAtre.004"
+    2300018: "fen\xEAtre.005"
+    2300020: Maison_1
+    2300022: Maison_1.001
+    2300024: Maison_1.002
+    2300026: Porte
+    2300028: Porte.001
+    2300030: Porte.002
+    2300032: routeTrottoir
+    3300000: Cube
+    3300002: Cube.001
+    3300004: Cube.002
+    3300006: Cube.003
+    3300008: "fen\xEAtre"
+    3300010: "fen\xEAtre.001"
+    3300012: "fen\xEAtre.002"
+    3300014: "fen\xEAtre.003"
+    3300016: "fen\xEAtre.004"
+    3300018: "fen\xEAtre.005"
+    3300020: Maison_1
+    3300022: Maison_1.001
+    3300024: Maison_1.002
+    3300026: Porte
+    3300028: Porte.001
+    3300030: Porte.002
+    3300032: routeTrottoir
+    4300000: Cube
+    4300002: Cube.003
+    4300004: Cube.002
+    4300006: "fen\xEAtre.005"
+    4300008: "fen\xEAtre.004"
+    4300010: Porte.002
+    4300012: Maison_1.002
+    4300014: Cube.001
+    4300016: Porte.001
+    4300018: "fen\xEAtre.003"
+    4300020: "fen\xEAtre.002"
+    4300022: Maison_1.001
+    4300024: Porte
+    4300026: "fen\xEAtre.001"
+    4300028: "fen\xEAtre"
+    4300030: routeTrottoir
+    4300032: Maison_1
+    10800000: Lamp
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 0
+    normalImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
