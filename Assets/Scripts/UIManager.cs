@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -99,16 +100,23 @@ public class UIManager : MonoBehaviour
 
     void OnGamestateChanged(GameManager.GameState newGameState)
     {
+        menuCanvasGroup.interactable = newGameState == GameManager.GameState.Menu;
+        menuCanvasGroup.blocksRaycasts = newGameState == GameManager.GameState.Menu;
+        inGameCanvasGroup.interactable = newGameState != GameManager.GameState.Menu;
+        inGameCanvasGroup.blocksRaycasts = newGameState != GameManager.GameState.Menu;
+
         if (newGameState == GameManager.GameState.Talking)
         {
             ChangeInteractionText(0);
             dialogueBoxCanvasGroup.DOFade(1f, 0.5f).SetEase(Ease.OutCubic);
+            dialogueBoxCanvasGroup.interactable = true;
             lockedCursor.enabled = false;
             memoriesCanvasGroup.DOFade(0f, 1f).SetEase(Ease.OutCubic);
         }
         else if (newGameState == GameManager.GameState.Walking)
         {
             dialogueBoxCanvasGroup.DOFade(0f, 0.5f).SetEase(Ease.OutCubic);
+            dialogueBoxCanvasGroup.interactable = false;
             lockedCursor.enabled = true;
             memoriesCanvasGroup.DOFade(1f, 1f).SetEase(Ease.OutCubic);
         }
@@ -230,7 +238,7 @@ public class UIManager : MonoBehaviour
             uiAudioSource.PlayOneShot(clip);
         }
 
-        tellMemoryCanvas.interactable = toWhite;
+        tellMemoryCanvas.blocksRaycasts = toWhite;
     }
 
     public void TellMemory(Memory memory)
@@ -293,7 +301,7 @@ public class UIManager : MonoBehaviour
 
     public void OnCreditsButtonClick()
     {
-
+        SceneManager.LoadScene(1);
     }
 
     public void OnQuitButtonClick()

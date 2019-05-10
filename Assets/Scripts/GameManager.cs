@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     public void Restart()
     {
         SoundManager.Instance.FadeMusic(false);
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
 
     protected override void Awake()
