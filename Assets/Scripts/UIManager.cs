@@ -74,6 +74,10 @@ public class UIManager : MonoBehaviour
 
     private AudioSource uiAudioSource;
 
+    private Tween memoryVignetteTween;
+
+    private bool alreadyTalk;
+
     void Start()
     {
         Player player = FindObjectOfType<Player>();
@@ -111,14 +115,23 @@ public class UIManager : MonoBehaviour
             dialogueBoxCanvasGroup.DOFade(1f, 0.5f).SetEase(Ease.OutCubic);
             dialogueBoxCanvasGroup.interactable = true;
             lockedCursor.enabled = false;
-            memoriesCanvasGroup.DOFade(0f, 1f).SetEase(Ease.OutCubic);
+            if (memoryVignetteTween != null)
+                memoryVignetteTween.Kill();
+            memoryVignetteTween = memoriesCanvasGroup.DOFade(0f, 1f).SetEase(Ease.OutCubic);
+            alreadyTalk = true;
         }
         else if (newGameState == GameManager.GameState.Walking)
         {
             dialogueBoxCanvasGroup.DOFade(0f, 0.5f).SetEase(Ease.OutCubic);
             dialogueBoxCanvasGroup.interactable = false;
             lockedCursor.enabled = true;
-            memoriesCanvasGroup.DOFade(1f, 1f).SetEase(Ease.OutCubic);
+            if (memoryVignetteTween != null)
+                memoryVignetteTween.Kill();
+            memoryVignetteTween = memoriesCanvasGroup.DOFade(1f, 1f).SetEase(Ease.OutCubic);
+            if (alreadyTalk && !memoriesCanvasGroup.gameObject.activeInHierarchy)
+            {
+                EnableMemoriesGO();
+            }
         }
     }
 
@@ -126,6 +139,15 @@ public class UIManager : MonoBehaviour
     {
         chatBoxText.text = string.Empty;
         talkCoroutine = StartCoroutine(DrawDialogue(sentence));
+    }
+
+    public void EnableMemoriesGO()
+    {
+        memoriesCanvasGroup.gameObject.SetActive(true);
+        if (memoryVignetteTween != null)
+            memoryVignetteTween.Kill();
+        memoriesCanvasGroup.alpha = 0f;
+        memoryVignetteTween = memoriesCanvasGroup.DOFade(1f, 0.2f).SetLoops(5, LoopType.Yoyo);
     }
 
     private IEnumerator DrawDialogue(string sentence)
