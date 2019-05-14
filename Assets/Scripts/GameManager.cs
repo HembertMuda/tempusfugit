@@ -41,7 +41,6 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
 
     public void Restart()
     {
-        SoundManager.Instance.FadeMusic(false);
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
 

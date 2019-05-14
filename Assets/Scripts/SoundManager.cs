@@ -8,13 +8,13 @@ public class SoundManager : MonoBehaviourSingleton<SoundManager>
     private AudioClip musicClip = null;
 
     [SerializeField]
-    private float musicVolume;
+    private float musicVolume = 0f;
 
     [SerializeField]
     private AudioClip ambiantClip = null;
 
     [SerializeField]
-    private float ambiantVolume;
+    private float ambiantVolume = 0f;
 
     private AudioSource sdAudioSource;
 
@@ -23,6 +23,7 @@ public class SoundManager : MonoBehaviourSingleton<SoundManager>
     void Start()
     {
         sdAudioSource = GetComponent<AudioSource>();
+        sdAudioSource.volume = musicVolume;
     }
 
     public void StopMusic()
