@@ -1,6 +1,5 @@
-﻿using UnityEngine;
-using DG.Tweening;
-using System.Collections;
+﻿using DG.Tweening;
+using UnityEngine;
 
 public class SoundManager : MonoBehaviourSingleton<SoundManager>
 {
@@ -20,8 +19,9 @@ public class SoundManager : MonoBehaviourSingleton<SoundManager>
 
     private Tween musicTween;
 
-    void Start()
+    protected override void Awake()
     {
+        base.Awake();
         sdAudioSource = GetComponent<AudioSource>();
         sdAudioSource.volume = musicVolume;
     }
