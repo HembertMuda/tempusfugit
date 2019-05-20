@@ -9955,7 +9955,7 @@ PrefabInstance:
     - target: {fileID: 6259892418635356694, guid: bc084bc4d176744429e32cf82dad8607,
         type: 3}
       propertyPath: introSentences.Array.data[2]
-      value: What are you pride of the most?
+      value: What is your biggest pride?
       objectReference: {fileID: 0}
     - target: {fileID: 6259892418635356694, guid: bc084bc4d176744429e32cf82dad8607,
         type: 3}
