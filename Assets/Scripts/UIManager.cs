@@ -39,6 +39,9 @@ public class UIManager : MonoBehaviour
     private TextMeshProUGUI tellMemoryText = null;
 
     [SerializeField]
+    private Image nextButtonMemory = null;
+
+    [SerializeField]
     private Transform memoriesIconParent = null;
 
     [SerializeField]
@@ -62,6 +65,9 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private AudioClip fadeOutSound = null;
 
+    [SerializeField]
+    private Image titleEndImage = null;
+
     public TalkableCharacter CurrentTalkableCharacter;
 
     private string currentSentence;
@@ -75,6 +81,8 @@ public class UIManager : MonoBehaviour
     private AudioSource uiAudioSource;
 
     private Tween memoryVignetteTween;
+
+    private Tween tellMemoryTween;
 
     private bool alreadyTalk;
 
@@ -138,7 +146,8 @@ public class UIManager : MonoBehaviour
     public void ChangeChatBoxText(string sentence)
     {
         chatBoxText.text = string.Empty;
-        talkCoroutine = StartCoroutine(DrawDialogue(sentence));
+        if (talkCoroutine == null)
+            talkCoroutine = StartCoroutine(DrawDialogue(sentence));
     }
 
     public void EnableMemoriesGO()
@@ -161,6 +170,7 @@ public class UIManager : MonoBehaviour
             {
                 uiAudioSource.PlayOneShot(writeSound[Random.Range(0, writeSound.Length)]);
             }
+            //Debug.Log($"sentence = {sentence} / charcount = {charCount}");
             chatBoxText.text = sentence.Substring(0, charCount);
             yield return new WaitForSeconds(0.05f);
         }
@@ -183,23 +193,30 @@ public class UIManager : MonoBehaviour
 
     public void OnMemoryNextButtonClicked()
     {
-        if (currentMemorySentenceindex < currentMemory.Sentences.Count)
+        if (tellMemoryTween == null || !tellMemoryTween.IsActive())
         {
-            //StopCoroutine(memoryCoroutine);
-            //memoryCoroutine = null;
-            LetsTalkMemory();
-            //tellMemoryText.text = currentMemorySentence;
-        }
-        else
-        {
-            if (CurrentTalkableCharacter.GetComponent<InspectorEnd>() == null)
+            if (currentMemorySentenceindex < currentMemory.Sentences.Count)
             {
-                FadeWhite(false);
-                CurrentTalkableCharacter.LetsTalk();
+                //StopCoroutine(memoryCoroutine);
+                //memoryCoroutine = null;
+                LetsTalkMemory();
+                //tellMemoryText.text = currentMemorySentence;
             }
             else
             {
-                GameManager.Instance.Restart();
+                if (CurrentTalkableCharacter.GetComponent<InspectorEnd>() == null)
+                {
+                    FadeWhite(false);
+                    CurrentTalkableCharacter.LetsTalk();
+                }
+                else
+                {
+                    tellMemoryText.text = string.Empty;
+                    nextButtonMemory.enabled = false;
+                    titleEndImage.DOFade(1f, 3f).SetEase(Ease.OutCubic).OnComplete(() => SoundManager.Instance.FadeMusic(false));
+                    titleEndImage.DOFade(0f, 3f).SetEase(Ease.OutCubic).SetDelay(6f).OnComplete(() => GameManager.Instance.Restart());
+                    //GameManager.Instance.Restart();
+                }
             }
         }
     }
@@ -241,12 +258,21 @@ public class UIManager : MonoBehaviour
 
     public void FadeWhite(bool toWhite)
     {
-        tellMemoryCanvas.DOFade(toWhite ? 1f : 0f, whiteFadeDuration).SetEase(Ease.OutCubic).OnComplete(() =>
+        if (tellMemoryTween != null)
+        {
+            tellMemoryTween.Kill();
+        }
+
+        tellMemoryTween = tellMemoryCanvas.DOFade(toWhite ? 1f : 0f, whiteFadeDuration).SetEase(Ease.OutCubic).OnComplete(() =>
             {
                 if (!toWhite)
                 {
                     CurrentTalkableCharacter.CurrentCharacterState = TalkableCharacter.CharacterState.Succeed;
                     CurrentTalkableCharacter.LetsTalk();
+                }
+                else
+                {
+                    LetsTalkMemory();
                 }
             });
 
@@ -270,7 +296,7 @@ public class UIManager : MonoBehaviour
         string memoryText = string.Empty;
         currentMemory = memory;
 
-        LetsTalkMemory();
+        //LetsTalkMemory();
 
         //memoryCoroutine = StartCoroutine(DrawMemory(memoryText));
     }
@@ -306,6 +332,7 @@ public class UIManager : MonoBehaviour
         RectTransform vignetteTransform = Instantiate(vignettePrefab, vignetteIconParent).GetComponent<RectTransform>();
         vignetteTransform.GetComponent<Image>().sprite = memorySprite;
         vignetteTransform.DOMove(memoriesIconParent.GetChild(vignetteIconParent.childCount - 1).GetComponent<RectTransform>().position, 1f).SetEase(Ease.OutCubic);
+        memoriesIconParent.GetChild(vignetteIconParent.childCount - 1).GetComponent<Image>().DOFade(1f, 0.5f).SetLoops(5, LoopType.Yoyo);
     }
 
     public void OnPlayButtonClick()

@@ -1,5 +1,6 @@
 ﻿using Sirenix.OdinInspector;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,22 +27,40 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     {
         if (CurrentGameState != newGameState)
         {
-            CurrentGameState = newGameState;
-            Cursor.lockState = CurrentGameState == GameState.Talking ? CursorLockMode.None : CursorLockMode.Locked;
-            Cursor.visible = CurrentGameState == GameState.Talking;
-            Cursor.SetCursor(CurrentGameState == GameState.Talking ? cursor : null, Vector2.zero, CursorMode.ForceSoftware);
-
-            if (onGameStateChanged != null)
+            if (newGameState == GameState.Walking && CurrentGameState == GameState.Talking)
+                StartCoroutine(WaitChageState(newGameState));
+            else
             {
-                onGameStateChanged(newGameState);
-            }
+                CurrentGameState = newGameState;
+                Cursor.lockState = CurrentGameState == GameState.Talking ? CursorLockMode.None : CursorLockMode.Locked;
+                Cursor.visible = CurrentGameState == GameState.Talking;
+                Cursor.SetCursor(CurrentGameState == GameState.Talking ? cursor : null, Vector2.zero, CursorMode.ForceSoftware);
 
+                if (onGameStateChanged != null)
+                {
+                    onGameStateChanged(newGameState);
+                }
+            }
+        }
+    }
+
+    private IEnumerator WaitChageState(GameState newGameState)
+    {
+        yield return new WaitForSeconds(0.2f);
+
+        CurrentGameState = newGameState;
+        Cursor.lockState = CurrentGameState == GameState.Talking ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = CurrentGameState == GameState.Talking;
+        Cursor.SetCursor(CurrentGameState == GameState.Talking ? cursor : null, Vector2.zero, CursorMode.ForceSoftware);
+
+        if (onGameStateChanged != null)
+        {
+            onGameStateChanged(newGameState);
         }
     }
 
     public void Restart()
     {
-        SoundManager.Instance.FadeMusic(false);
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
 

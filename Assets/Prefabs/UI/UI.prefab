@@ -3398,6 +3398,80 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
+--- !u!1 &7560872537447448482
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2115743248900792091}
+  - component: {fileID: 8551233193361655440}
+  - component: {fileID: 682030896892086286}
+  m_Layer: 5
+  m_Name: Title End
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2115743248900792091
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7560872537447448482}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8068682765348701833}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 688, y: 328}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &8551233193361655440
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7560872537447448482}
+  m_CullTransparentMesh: 0
+--- !u!114 &682030896892086286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7560872537447448482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 0d68943628d9a694aa9467c850bf0547, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
 --- !u!1 &7698457964549540226
 GameObject:
   m_ObjectHideFlags: 0
@@ -3511,6 +3585,7 @@ RectTransform:
   m_Children:
   - {fileID: 4999440026825654636}
   - {fileID: 8068682765491551948}
+  - {fileID: 2115743248900792091}
   m_Father: {fileID: 374204874583607246}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3605,6 +3680,7 @@ MonoBehaviour:
   lockedCursor: {fileID: 3921401942571346377}
   tellMemoryCanvas: {fileID: 2055714344366829243}
   tellMemoryText: {fileID: 7571857668136834790}
+  nextButtonMemory: {fileID: 5793984151991040649}
   memoriesIconParent: {fileID: 1594699044615019942}
   vignetteIconParent: {fileID: 1992938040333354565}
   vignettePrefab: {fileID: 2651088956148449298, guid: 04516676931b4ba4fa3c9cbbfb49bb74,
@@ -3617,6 +3693,7 @@ MonoBehaviour:
   inGameCanvasGroup: {fileID: 6447350343103939412}
   fadeInSound: {fileID: 0}
   fadeOutSound: {fileID: 0}
+  titleEndImage: {fileID: 682030896892086286}
   CurrentTalkableCharacter: {fileID: 0}
 --- !u!82 &7125438755810372831
 AudioSource:

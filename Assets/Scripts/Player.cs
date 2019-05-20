@@ -58,6 +58,10 @@ public class Player : MonoBehaviour
 
     private UIManager uIManager;
 
+    private Tween camMoveTween;
+
+    private Tween camRotTween;
+
     public Action<int> onInteractionLayerChanged;
 
     private void Start()
@@ -182,8 +186,16 @@ public class Player : MonoBehaviour
 
     public void AdaptCamToTalkableCharacter(TalkableCharacter talkableCharacter)
     {
-        camTransform.DOMove(talkableCharacter.camFramingPoint.position, 1f).SetEase(Ease.OutCubic);
-        camTransform.DORotate(talkableCharacter.camFramingPoint.eulerAngles, 1f).SetEase(Ease.OutCubic);
+        if (camMoveTween != null)
+            camMoveTween.Kill();
+        if (camRotTween != null)
+            camRotTween.Kill();
+
+        camTransform.localPosition = camLocalPosInit;
+        camTransform.localEulerAngles = Vector3.zero;
+
+        camMoveTween = camTransform.DOMove(talkableCharacter.camFramingPoint.position, 1f).SetEase(Ease.OutCubic);
+        camRotTween = camTransform.DORotate(talkableCharacter.camFramingPoint.eulerAngles, 1f).SetEase(Ease.OutCubic);
     }
 
     IEnumerator PlayFootstep()
@@ -199,6 +211,11 @@ public class Player : MonoBehaviour
     {
         if (newGameState == GameManager.GameState.Walking)
         {
+            if (camMoveTween != null)
+                camMoveTween.Kill();
+            if (camRotTween != null)
+                camRotTween.Kill();
+
             camTransform.localPosition = camLocalPosInit;
             camTransform.localEulerAngles = Vector3.zero;
         }
