@@ -233,6 +233,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
         type: 3}
+      propertyPath: saysomething.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
+      propertyPath: asksomething.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806576894710078673, guid: dafeed7499d849e4690a4ba306e604d8,
+        type: 3}
       propertyPath: rightChoiceSentences.Array.data[0]
       value: I am sorry for your loss.
       objectReference: {fileID: 0}
@@ -1037,6 +1047,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0656827
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903920277976372969, guid: 6a4fd7622f8b42547b6a895909931d01,
+        type: 3}
+      propertyPath: saysomething.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903920277976372969, guid: 6a4fd7622f8b42547b6a895909931d01,
+        type: 3}
+      propertyPath: asksomething.Array.size
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a4fd7622f8b42547b6a895909931d01, type: 3}
@@ -7703,6 +7723,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
         type: 3}
+      propertyPath: saysomething.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
+      propertyPath: asksomething.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
+        type: 3}
       propertyPath: choices.Array.data[0]
       value: Driving in the night
       objectReference: {fileID: 0}
@@ -7877,7 +7907,7 @@ PrefabInstance:
         type: 3}
       propertyPath: memoryIcon
       value: 
-      objectReference: {fileID: 21300000, guid: 9453be8220c4c49418618a60c09a2ab2,
+      objectReference: {fileID: 21300000, guid: 976cdd910847b544084be672a950f780,
         type: 3}
     - target: {fileID: 8564071038885713142, guid: 1f2a5914b85ac7d4b93d8a7d8ef6f38d,
         type: 3}
@@ -9886,6 +9916,16 @@ PrefabInstance:
         type: 3}
       propertyPath: choicesName.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259892418635356694, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: saysomething.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259892418635356694, guid: bc084bc4d176744429e32cf82dad8607,
+        type: 3}
+      propertyPath: asksomething.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6259892418635356694, guid: bc084bc4d176744429e32cf82dad8607,
         type: 3}
@@ -12086,6 +12126,16 @@ PrefabInstance:
         type: 3}
       propertyPath: choicesName.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: saysomething.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
+        type: 3}
+      propertyPath: asksomething.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3616092725089035079, guid: d44317d5feee2c34f95772cec3e939ff,
         type: 3}
@@ -21422,15 +21472,15 @@ PrefabInstance:
         type: 3}
       propertyPath: Memories.Array.data[0].Sentences.Array.data[1]
       value: "You see, I wasn\u2019t supposed to be there. I lied to my parents to
-        see my lover. As I was rushing to get home in time, snow started to fall.I
-        had to slow my car."
+        see my lover. As I was rushing to get home in time, snow started to fall.
+        I had to slow my car."
       objectReference: {fileID: 0}
     - target: {fileID: 8989993813693477467, guid: d1c8a57836e3fdb439a658eca6066f41,
         type: 3}
       propertyPath: Memories.Array.data[0].Sentences.Array.data[2]
-      value: ' A herd of deers and hinds crossed the road and stopped in the middle
+      value: A herd of deers and hinds crossed the road and stopped in the middle
         of the road. I stopped the car in panic. The hinds looked at me for a minute
-        that felt like an eternity.'
+        that felt like an eternity.
       objectReference: {fileID: 0}
     - target: {fileID: 8989993813693477467, guid: d1c8a57836e3fdb439a658eca6066f41,
         type: 3}
