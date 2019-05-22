@@ -18,6 +18,9 @@ public class UIManager : MonoBehaviour
     private CanvasGroup dialogueBoxCanvasGroup = null;
 
     [SerializeField]
+    private float dialogueWriteWait = 0.03f;
+
+    [SerializeField]
     private CanvasGroup memoriesCanvasGroup = null;
 
     [SerializeField]
@@ -172,7 +175,7 @@ public class UIManager : MonoBehaviour
             }
             //Debug.Log($"sentence = {sentence} / charcount = {charCount}");
             chatBoxText.text = sentence.Substring(0, charCount);
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(dialogueWriteWait);
         }
         talkCoroutine = null;
     }

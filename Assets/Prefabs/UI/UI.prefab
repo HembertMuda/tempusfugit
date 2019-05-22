@@ -3669,6 +3669,7 @@ MonoBehaviour:
   whiteFadeDuration: 2
   interactionText: {fileID: 6545221826825781855}
   dialogueBoxCanvasGroup: {fileID: 9072675738521823365}
+  dialogueWriteWait: 0.035
   memoriesCanvasGroup: {fileID: 7933301481429685858}
   tutoCanvasGroup: {fileID: 7303263842270350033}
   chatBoxText: {fileID: 4041527239906385877}
